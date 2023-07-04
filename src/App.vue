@@ -1,6 +1,7 @@
 <template>
   <splash-screen :isLoading="isLoading"/>
   <main v-if="!isLoading">
+    <SlidingText/>
     <home/>
     <about/>
   </main>
@@ -10,10 +11,11 @@
 import Home from "@/views/Home.vue";
 import About from "@/views/About.vue";
 import SplashScreen from "@/components/splashScreen.vue";
+import SlidingText from "@/views/SlidingText.vue";
 
 export default {
   name: 'App',
-  components: {SplashScreen, About, Home},
+  components: {SlidingText, SplashScreen, About, Home},
   data() {
     return { isLoading: true };
   },

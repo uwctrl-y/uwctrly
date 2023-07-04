@@ -1,10 +1,12 @@
 <template>
   <section class="hero-section">
-    <div class="hero-image-container" data-aos="fade-up">
-      <img src="@/assets/keys.png">
+    <div class="scrolling-box">
+      <div class="hero-image-container" data-aos="fade-up">
+        <img src="@/assets/home/homescreenTV.svg">
+      </div>
     </div>
     <div class="content-container" data-aos="fade-up">
-      <h1 class="hero-title">Welcome to CTRL + Y</h1>
+      <h1 class="hero-title">CTRL + Y</h1>
       <p class="hero-subtitle">Design the Future Today!</p>
       <p class="hero-description">
         CTRL + y is a designathon with the focus of designing innovative solutions for the rapidly evolving future of tech. We’re looking for like-minded people who are invested in our mission, and share similar passions for this project.
@@ -111,6 +113,10 @@ export default {
 .content-container {
   margin-bottom: 3em;
   text-size-adjust: 100%;
+}
+
+template{
+  scroll-behavior: smooth;
 }
 
 @media (min-width: 768px) {
