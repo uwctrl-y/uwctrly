@@ -1,70 +1,45 @@
 <template>
   <div>
-    <div id="headingText">
-      <span v-for="(word, index) in text" :key="index" class="animated-word">
-        <p v-if="word.italic">{{ word.content }}</p>
+    <div class="headingText">
+      <span v-for="(word, index) in heading" :key="index" class="animated-word">
+        <p v-if="!word.italic">{{ word.content }}</p>
         <p v-else><i>{{ word.content }}</i></p>
       </span>
     </div>
+    <p class="paragraphText">{{ paragraph }}</p>
   </div>
 </template>
 
 <script>
 export default {
-  data() {
-    return {
-      text: [{
-        content: 'We',
-        italic: true,
-      }, {
-        content: 'aim',
-        italic: true,
-      }, {
-        content: 'to',
-        italic: true,
-      }, {
-        content: 'foster',
-        italic: true,
-      }, {
-        content: 'innovative',
-        italic: false
-      }, {
-        content: 'design',
-        italic: false
-      }, {
-        content: 'solutions',
-        italic: false
-      }, {
-        content: 'for',
-        italic: true,
-      }, {
-        content: 'emerging',
-        italic: true,
-      }, {
-        content: 'technologies',
-        italic: true,
-      }],
-    };
-  },
+  props: ['heading', 'paragraph'],
   mounted() {
     const animatedLetters = this.$el.querySelectorAll(".animated-word");
+    const animatedParagraph = this.$el.querySelectorAll(".paragraphText")[0];
 
     setTimeout(() => {
+
       animatedLetters.forEach((letter, index) => {
         setTimeout(() => {
           letter.style.opacity = "1";
           letter.style.transform = "translateY(0)";
-        }, index * 100); // Adjust the delay as per your preference
+        }, index * 100);
       });
+
+      setTimeout(() => {
+        animatedParagraph.style.opacity = "1";
+        animatedParagraph.style.transform = "translateY(0)";
+      }, 100);
+
     }, 500); // Adjust the delay before animation starts as per your preference
   },
 };
 </script>
 
 <style>
-#headingText {
+.headingText {
   position: relative;
-  font-size: 84px!important;
+  font-size: 84px !important;
   font-weight: 500;
   line-height: 94px;
   letter-spacing: -4.2px;
@@ -72,6 +47,17 @@ export default {
   display: flex;
   flex-wrap: wrap;
   column-gap: 15px;
+}
+
+.paragraphText {
+  margin-top: 60px;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: -1.5px;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: opacity 0.5s, transform 0.5s;
 }
 
 .animated-word {
