@@ -1,5 +1,5 @@
 <template>
-  <section class="about-section">
+  <section class="about-section" ref="about">
     <div class="content-container" data-aos="fade-up">
       <h1 class="about-title">About CTRL + Y</h1>
       <p class="about-description">
@@ -25,6 +25,9 @@
 
 <script>
 export default {
+  mounted() {
+    console.log(this.$refs.about.offsetHeight)
+  }
 
 }
 </script>

@@ -2,7 +2,7 @@
 <!-- could be something else, charissa will need to verify -->
 
 <template>
-  <div>
+  <div ref="slidingText">
     <div id="loadingText">
       <span v-for="(letter, index) in text" :key="index" class="animated-letter">
         {{ letter }}
@@ -29,6 +29,7 @@ export default {
         }, index * 100); // Adjust the delay as per your preference
       });
     }, 500); // Adjust the delay before animation starts as per your preference
+    console.log(this.$refs.slidingText.offsetHeight)
   },
 };
 </script>
