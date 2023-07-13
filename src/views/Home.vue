@@ -1,5 +1,5 @@
 <template>
-  <section class="hero-section">
+  <section class="hero-section" ref="home">
     <div class="scrolling-box">
       <div class="hero-image-container" data-aos="fade-up">
         <img src="@/assets/home/homescreenTV.svg">
@@ -26,7 +26,9 @@
 
 <script>
 export default {
-
+  mounted() {
+    console.log(this.$refs.home.offsetHeight)
+  }
 }
 </script>
 

@@ -45,7 +45,7 @@ export default {
   font-style: normal;
   display: flex;
   justify-content: space-between;
-  padding-bottom: 235px;
+  padding: 103px 83px 235px 83px;
 }
 
 .intro-left {
