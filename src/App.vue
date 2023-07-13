@@ -2,9 +2,7 @@
   <splash-screen :isLoading="isLoading" />
   <main v-if="!isLoading">
     <div ref="componentsBeforeIntro">
-      <SlidingText />
       <home />
-      <about />
     </div>
     <introduction :reachedIntro="reachedIntro" />
   </main>
@@ -16,6 +14,7 @@ import About from "@/views/About.vue";
 import Introduction from "@/views/Introduction.vue";
 import SplashScreen from "@/components/splashScreen.vue";
 import SlidingText from "@/views/SlidingText.vue";
+import '@/assets/css/scrollbar.css';
 
 export default {
   name: 'App',

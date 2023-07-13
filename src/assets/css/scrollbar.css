@@ -1,0 +1,23 @@
+/* For Webkit-based browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 10px; /* Adjust the width as needed */
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f0f0f0;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #09702C;
+    height: 10px; /* Adjust the overall height of the thumb */
+    border-radius: 5px; /* Adjust the border-radius to make it shorter */
+}
+
+/* For Firefox */
+/* Add the appropriate prefixes for other browsers if needed */
+.scrollbar-container::-webkit-scrollbar-thumb {
+    scrollbar-width: thin;
+    scrollbar-color: #09702C #f0f0f0;
+    height: 10px; /* Adjust the overall height of the thumb */
+    border-radius: 5px; /* Adjust the border-radius to make it shorter */
+}
