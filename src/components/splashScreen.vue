@@ -1,7 +1,7 @@
 <template>
   <div class="splash-screen">
     <div :class="{ loader: true, fadeout: !isLoading, keys}">
-      <img src="@/assets/keyanimated.gif" alt="">
+      <img src="@/assets/home/keyanimated.gif" alt="">
     </div>
   </div>
 </template>
