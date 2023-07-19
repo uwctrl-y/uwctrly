@@ -2,7 +2,7 @@
     <section class="description-section">
       <div class="content-container" data-aos="fade-up">
         <div class="description-intro">
-          <h1 class="description-title">What Exactly is our <i>Designathon</i></h1>
+          <h1 class="description-title">What's Going Down</h1>
           <svg class="description-divider" width="71" height="71" viewBox="0 0 71 71" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M35.5001 71C40.8306 71 44 67.1485 44 62.97C44 59.4353 38.5995 46.306 36.4079 41.1235C36.0663 40.3157 34.942 40.3191 34.6048 41.1288C32.4213 46.3714 27 59.7157 27 62.97C27 67.1485 30.1695 71 35.5001 71Z" fill="#09702C"/>
           <path d="M4.25011 53.3613C6.9154 57.9777 11.8356 58.7967 15.4542 56.7075C18.5154 54.9401 27.1855 43.6984 30.5778 39.2092C31.1066 38.5094 30.5415 37.5375 29.6717 37.6503C24.0397 38.3807 9.77253 40.3579 6.95423 41.985C3.33556 44.0743 1.58482 48.7449 4.25011 53.3613Z" fill="#09702C"/>
@@ -87,14 +87,21 @@ export default {
 }
  .description-title {
     color: #09702C;
-    font-size: 180px;
+    text-align: center;
+    font-size: 11.25rem;
     font-style: normal;
     font-weight: 500;
-    line-height: 180px;
-    letter-spacing: -9px;
+    line-height: 11.25rem; /* 100% */
+    letter-spacing: -0.5625rem;
     text-transform: uppercase;
-    margin-bottom: 30px;
     text-size-adjust: 100%;
+  }
+  .description-intro {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.8125rem;
+    margin: 0 1px;
   }
   
   .description-divider {
