@@ -13,9 +13,9 @@
         <p class="section-content" v-if="!reachedIntro">{{ paragraph }}</p>
       </div>
     </div>
-    <div class="paintbrush-graphic">
-      <div ref="background">
-        <img class="svg-paintbrush" src="../assets/paintbrushGraphic.svg" />
+    <div class="paintbrush-graphic" ref="graphicBox">
+      <div :style="{ transform: `translateY(${graphicParallax}px)` }">
+        <img class="svg-paintbrush" ref="graphic" src="../assets/paintbrushGraphic.svg" />
       </div>
     </div>
 
@@ -27,23 +27,23 @@ import SlidingTextIntroduction from './SlidingTextIntroduction.vue';
 
 export default {
   mounted() {
-    document.addEventListener('scroll', this.handleScroll)
-  },
-  unmounted() {
-    document.removeEventListener('scroll', this.handleScroll)
+    window.addEventListener('scroll', this.graphicParallaxEffect);
   },
   methods: {
-    handleScroll(evt) {
-      const scrollY = window.scrollY - 1900
+    graphicParallaxEffect(event) {
+      // The graphic is responsive, adjust the max height of the surrounding container depending on the graphic's height
+      const heightOfGraphic = this.$refs.graphic.offsetHeight
+      this.$refs.graphicBox.style.maxHeight = (0.65 * heightOfGraphic) + 'px'
 
-      const maxBackgroundSize = 120
-      const backgroundSize = scrollY / (maxBackgroundSize - 100) // increases as user scrolls
-
-      // zoom the background at a slower rate
-      this.$refs.background.style.transform =
-        'scale(' + (100 + backgroundSize * 0.1) / 100 + ')'
-    }
-
+      const scrollY = window.scrollY; 
+      // Start the animation a bit later so the graphic doesnt entirely translate out of view
+      if (this.reachedIntro) this.graphicParallax = this.graphicParallax + ((scrollY - this.prevScrollY) * -0.3);
+      
+      this.prevScrollY = scrollY;
+    },
+  },
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.graphicParallaxEffect);
   },
   components: { SlidingTextIntroduction },
   props: ['reachedIntro'],
@@ -54,6 +54,8 @@ export default {
     return {
       heading: headingArray,
       paragraph: paragraph,
+      graphicParallax: 400,
+      prevScrollY: 0
     };
   },
 }
@@ -111,14 +113,17 @@ export default {
 .paintbrush-graphic {
   width: 100%;
   height: fit-content;
+  max-height: calc(0.54*(100vw - 80px));
   overflow: hidden;
   position: relative;
   text-align: center;
+  padding: 40px;
+  margin-block: 40px;
+  border-radius: 10px;
 }
 
 .svg-paintbrush {
   width: 100%;
-  padding: 40px;
   max-width: 99vw;
 }
 

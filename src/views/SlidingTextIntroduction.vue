@@ -79,7 +79,14 @@ export default {
   margin-bottom: 30px;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1070px) {
+  .headingText {
+    font-size: 74px !important;
+    line-height: 84px;
+  }
+}
+
+@media screen and (max-width: 715px) {
   .headingText {
     font-size: 64px !important;
     line-height: 74px;
