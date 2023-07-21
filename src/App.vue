@@ -5,6 +5,7 @@
       <home />
     </div>
     <introduction :reachedIntro="reachedIntro" />
+    <description/>
   </main>
 </template>
 
@@ -12,13 +13,14 @@
 import Home from "@/views/Home.vue";
 import About from "@/views/About.vue";
 import Introduction from "@/views/Introduction.vue";
+import Description from "@/views/Description.vue";
 import SplashScreen from "@/components/splashScreen.vue";
 import SlidingText from "@/views/SlidingText.vue";
 import '@/assets/css/scrollbar.css';
 
-export default {
+export default { 
   name: 'App',
-  components: { SlidingText, SplashScreen, About, Home, Introduction },
+  components: { SlidingText, SplashScreen, About, Home, Introduction, Description },
   methods: {
     scroll() {
       window.onscroll = () => {
