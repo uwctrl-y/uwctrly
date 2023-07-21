@@ -111,14 +111,13 @@ export default {
 }
 
 .paintbrush-graphic {
-  width: 100%;
+  width: calc(100% - 80px);
   height: fit-content;
   max-height: calc(0.54*(100vw - 80px));
   overflow: hidden;
   position: relative;
   text-align: center;
-  padding: 40px;
-  margin-block: 40px;
+  margin: 80px 40px;
   border-radius: 10px;
 }
 
@@ -149,7 +148,8 @@ export default {
   }
 
   .paintbrush-graphic {
-    padding: 20px;
+    margin: 60px 20px;
+    width: calc(100% - 40px);
   }
 }
 
