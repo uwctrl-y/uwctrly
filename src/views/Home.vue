@@ -29,9 +29,7 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 2em 1em;
   text-size-adjust: 100%;
-  min-height: 800px;
 }
 
 .hero-title {
