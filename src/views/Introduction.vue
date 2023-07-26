@@ -35,10 +35,10 @@ export default {
       const heightOfGraphic = this.$refs.graphic.offsetHeight
       this.$refs.graphicBox.style.maxHeight = (0.65 * heightOfGraphic) + 'px'
 
-      const scrollY = window.scrollY; 
+      const scrollY = window.scrollY;
       // Start the animation a bit later so the graphic doesnt entirely translate out of view
       if (this.reachedIntro) this.graphicParallax = this.graphicParallax + ((scrollY - this.prevScrollY) * -0.3);
-      
+
       this.prevScrollY = scrollY;
     },
   },
