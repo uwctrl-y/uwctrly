@@ -8,7 +8,6 @@
     <description/>
     <sponsors/>
     <OurTeam/>
-    <test-page/>
   </main>
 </template>
 

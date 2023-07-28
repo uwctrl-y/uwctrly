@@ -28,6 +28,13 @@ export default {
                 "src/assets/ourTeam/testImages/image3.png",
                 "src/assets/ourTeam/testImages/image4.png",
                 "src/assets/ourTeam/testImages/image1.png",
+                "src/assets/ourTeam/testImages/image5.png",
+                "src/assets/ourTeam/testImages/image6.png",
+                "src/assets/ourTeam/testImages/image7.png",
+                "src/assets/ourTeam/testImages/image8.png",
+                "src/assets/ourTeam/testImages/image9.png",
+                "src/assets/ourTeam/testImages/image10.png",
+                "src/assets/ourTeam/testImages/image11.png",
             ],
             currentImageIndex: 0, // The index of the currently displayed image
             lockScreen: true,
@@ -55,30 +62,32 @@ export default {
         window.removeEventListener("scroll", this.onScroll);
     },
     methods: {
-        onScroll() {
-            const currentScrollY = window.scrollY;
-            const scrollDirection = currentScrollY > this.prevScrollY ? "down" : "up";
+      onScroll() {
+        const currentScrollY = window.scrollY;
+        const scrollDirection = currentScrollY > this.prevScrollY ? "down" : "up";
+        const scrollDifference = Math.abs(currentScrollY - this.prevScrollY);
+        const increment = 0.02; // Adjust this constant increment to control the speed
 
-            if (scrollDirection === "down") {
-                this.scrollOffset += 0.4;
-            } else {
-                this.scrollOffset -= 0.4;
-            }
+        if (scrollDirection === "down") {
+          this.scrollOffset += increment * scrollDifference; // Use the constant increment multiplied by the scroll difference
+        } else {
+          this.scrollOffset -= increment * scrollDifference; // Use the constant increment multiplied by the scroll difference
+        }
 
-            if (this.lockScreen) {
-                // Update the displayed image index based on the scroll direction
-                if (scrollDirection === "down") {
-                    this.currentImageIndex = Math.min(
-                        this.currentImageIndex + 1,
-                        this.imageUrls.length - 1
-                    );
-                } else {
-                    this.currentImageIndex = Math.max(this.currentImageIndex - 1, 0);
-                }
-            }
+        if (this.lockScreen) {
+          // Update the displayed image index based on the scroll direction
+          if (scrollDirection === "down") {
+            this.currentImageIndex = Math.min(
+                this.currentImageIndex + 1,
+                this.imageUrls.length - 1
+            );
+          } else {
+            this.currentImageIndex = Math.max(this.currentImageIndex - 1, 0);
+          }
+        }
 
-            this.prevScrollY = currentScrollY;
-        },
+        this.prevScrollY = currentScrollY;
+      },
         handleSectionIntersection(entries) {
             // Check if the "Our Team" section is fully in view
             const inView = entries[0].isIntersecting;
