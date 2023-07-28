@@ -8,22 +8,7 @@
         <div class="parallax-container">
 <!--            image 1-->
             <div class="sponsor-box-two">
-                <img class="circle" :style="{ top: `${scrollOffset * 0.5}px` }" ref="graphic" src="../assets/ourTeam/testImages/image1.png" />
-            </div>
-
-<!--            image 2-->
-            <div class="sponsor-box-two">
-                <img class="circle" :style="{ top: `${scrollOffset * 0.3}px` }" ref="graphic" src="../assets/ourTeam/testImages/image2.png" />
-            </div>
-
-<!--            image 3-->
-            <div class="sponsor-box-two">
-                <img class="circle" :style="{ top: `${scrollOffset * 0.2}px` }" ref="graphic" src="../assets/ourTeam/testImages/image3.png" />
-            </div>
-
-<!--            image 4-->
-            <div class="sponsor-box-two">
-                <img class="circle" :style="{ top: `${scrollOffset * 0.2}px` }" ref="graphic" src="../assets/ourTeam/testImages/image4.png" />
+                <img class="circle" :style="{ top: `${scrollOffset * 0.5}px` }" ref="graphic" src="../assets/ourTeam/testImages/zee.png" />
             </div>
 
         </div>
@@ -54,7 +39,6 @@ export default {
 <style scoped>
 .our-team-section {
     border-radius: 16px;
-    background: white;
     padding: 96px;
     color: #09702C;
 }
@@ -77,7 +61,7 @@ export default {
 .parallax-container {
     overflow: hidden;
     position: relative;
-    height: 60vh; /* Adjust this height to control the parallax effect range */
+    height: 65vh; /* Adjust this height to control the parallax effect range */
 }
 
 .sponsor-box-two {
