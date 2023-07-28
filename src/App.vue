@@ -8,6 +8,7 @@
     <description/>
     <sponsors/>
     <OurTeam/>
+    <test-page/>
   </main>
 </template>
 
@@ -20,11 +21,13 @@ import SplashScreen from "@/components/splashScreen.vue";
 import SlidingText from "@/views/SlidingText.vue";
 import Sponsors from "./views/Sponsors.vue";
 import OurTeam from "@/views/OurTeam.vue";
+import testPage from "@/views/testPage.vue"
 import '@/assets/css/scrollbar.css';
+import TestPage from "@/views/testPage.vue";
 
 export default { 
   name: 'App',
-  components: { SlidingText, SplashScreen, About, Home, Introduction, Description, Sponsors, OurTeam },
+  components: {TestPage, SlidingText, SplashScreen, About, Home, Introduction, Description, Sponsors, OurTeam },
   methods: {
     scroll() {
       window.onscroll = () => {
