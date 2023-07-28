@@ -24,10 +24,10 @@ export default {
             prevScrollY: 0, // Store the previous scroll position
             imageUrls: [
                 "src/assets/ourTeam/testImages/zee.png",
+                "src/assets/ourTeam/testImages/image1.png",
                 "src/assets/ourTeam/testImages/image2.png",
                 "src/assets/ourTeam/testImages/image3.png",
                 "src/assets/ourTeam/testImages/image4.png",
-                "src/assets/ourTeam/testImages/image1.png",
                 "src/assets/ourTeam/testImages/image5.png",
                 "src/assets/ourTeam/testImages/image6.png",
                 "src/assets/ourTeam/testImages/image7.png",
@@ -66,7 +66,7 @@ export default {
         const currentScrollY = window.scrollY;
         const scrollDirection = currentScrollY > this.prevScrollY ? "down" : "up";
         const scrollDifference = Math.abs(currentScrollY - this.prevScrollY);
-        const increment = 0.02; // Adjust this constant increment to control the speed
+        const increment = 0.5; // Adjust this constant increment to control the speed
 
         if (scrollDirection === "down") {
           this.scrollOffset += increment * scrollDifference; // Use the constant increment multiplied by the scroll difference
@@ -74,7 +74,7 @@ export default {
           this.scrollOffset -= increment * scrollDifference; // Use the constant increment multiplied by the scroll difference
         }
 
-        if (this.lockScreen) {
+        if (this.lockScreen && scrollDifference > 15) {
           // Update the displayed image index based on the scroll direction
           if (scrollDirection === "down") {
             this.currentImageIndex = Math.min(
@@ -84,9 +84,8 @@ export default {
           } else {
             this.currentImageIndex = Math.max(this.currentImageIndex - 1, 0);
           }
+          this.prevScrollY = currentScrollY;
         }
-
-        this.prevScrollY = currentScrollY;
       },
         handleSectionIntersection(entries) {
             // Check if the "Our Team" section is fully in view
@@ -129,7 +128,7 @@ export default {
 .parallax-container {
     overflow: hidden;
     position: relative;
-    height: 70vh; /* Adjust this height to control the parallax effect range */
+    height: 65vh; /* Adjust this height to control the parallax effect range */
 }
 
 .sponsor-box-two {
