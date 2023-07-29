@@ -1,9 +1,9 @@
 <template>
     <section class="our-team-section" ref="ourTeamSection">
-        <div class="Header">
-            <h1 class="heading-text">Our Team</h1>
-        </div>
         <div class="parallax-container">
+            <div class="heading-container">
+                <h1 class="heading-text">Our Team</h1>
+            </div>
             <div class="sponsor-box-two">
                 <img
                         class="circle"
@@ -21,7 +21,7 @@ export default {
     data() {
         return {
             scrollOffset: 0,
-            prevScrollY: 0, // Store the previous scroll position
+            prevScrollY: 0,
             imageUrls: [
                 "src/assets/ourTeam/testImages/zee.png",
                 "src/assets/ourTeam/testImages/image1.png",
@@ -36,7 +36,7 @@ export default {
                 "src/assets/ourTeam/testImages/image10.png",
                 "src/assets/ourTeam/testImages/image11.png",
             ],
-            currentImageIndex: 0, // The index of the currently displayed image
+            currentImageIndex: 0,
             lockScreen: true,
         };
     },
@@ -66,16 +66,15 @@ export default {
         const currentScrollY = window.scrollY;
         const scrollDirection = currentScrollY > this.prevScrollY ? "down" : "up";
         const scrollDifference = Math.abs(currentScrollY - this.prevScrollY);
-        const increment = 0.5; // Adjust this constant increment to control the speed
+        const increment = 0.5;
 
         if (scrollDirection === "down") {
-          this.scrollOffset += increment * scrollDifference; // Use the constant increment multiplied by the scroll difference
+          this.scrollOffset += increment * scrollDifference;
         } else {
-          this.scrollOffset -= increment * scrollDifference; // Use the constant increment multiplied by the scroll difference
+          this.scrollOffset -= increment * scrollDifference;
         }
 
         if (this.lockScreen && scrollDifference > 15) {
-          // Update the displayed image index based on the scroll direction
           if (scrollDirection === "down") {
             this.currentImageIndex = Math.min(
                 this.currentImageIndex + 1,
@@ -88,14 +87,11 @@ export default {
         }
       },
         handleSectionIntersection(entries) {
-            // Check if the "Our Team" section is fully in view
             const inView = entries[0].isIntersecting;
 
             if (inView) {
-                // Unlock the screen when the section is in view
                 this.lockScreen = false;
             } else {
-                // Lock the screen if the section is not in view
                 this.lockScreen = true;
             }
         },
@@ -106,13 +102,15 @@ export default {
 <style scoped>
 .our-team-section {
     border-radius: 16px;
-    padding: 96px;
+    padding: 120px;
     color: #09702C;
+    position: relative;
+    min-height: 80vh;
 }
 
-.Header {
-    display: flex;
-    justify-content: center;
+.heading-container{
+    position: absolute;
+    z-index: 1;
 }
 
 .heading-text {
@@ -122,13 +120,17 @@ export default {
     line-height: 180px;
     letter-spacing: -9px;
     text-transform: uppercase;
-    margin-bottom: -8.5vh;
+    margin-bottom: 60vh;
 }
 
 .parallax-container {
     overflow: hidden;
     position: relative;
-    height: 65vh; /* Adjust this height to control the parallax effect range */
+    height: 80vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .sponsor-box-two {
@@ -146,4 +148,19 @@ export default {
     max-width: 100%;
     transition: top 0.2s ease; /* Add a smooth transition for the parallax effect */
 }
+
+@media screen and (max-width: 768px) {
+    .heading-text {
+        font-size: 12vw;
+        letter-spacing: -0.1em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .heading-text {
+        font-size: 16vw;
+        letter-spacing: -0.05em;
+    }
+}
+
 </style>
