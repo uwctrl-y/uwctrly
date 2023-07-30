@@ -1,5 +1,5 @@
 <template>
-  <splash-screen :isLoading="isLoading" />
+  <splash-screen v-if="isLoading" :isLoading="isLoading" />
   <main v-if="!isLoading">
     <div ref="componentsBeforeIntro">
       <home />
@@ -7,6 +7,7 @@
     <introduction :reachedIntro="reachedIntro" />
     <description/>
     <sponsors/>
+    <faq/>
     <OurTeam/>
   </main>
 </template>
@@ -19,12 +20,13 @@ import Description from "@/views/Description.vue";
 import SplashScreen from "@/components/splashScreen.vue";
 import SlidingText from "@/views/SlidingText.vue";
 import Sponsors from "./views/Sponsors.vue";
+import Faq from "./views/Faq.vue"
 import OurTeam from "@/views/OurTeam.vue";
 import '@/assets/css/scrollbar.css';
 
 export default { 
   name: 'App',
-  components: {SlidingText, SplashScreen, About, Home, Introduction, Description, Sponsors, OurTeam },
+  components: {SlidingText, SplashScreen, About, Home, Introduction, Description, Sponsors, Faq, OurTeam },
   methods: {
     scroll() {
       window.onscroll = () => {
