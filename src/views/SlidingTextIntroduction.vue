@@ -31,7 +31,7 @@ export default {
         animatedParagraph.style.transform = "translateY(0)";
       }, 100);
 
-    }, 500); // Adjust the delay before animation starts as per your preference
+    }, 1500); // Adjust the delay before animation starts as per your preference
   },
 };
 </script>

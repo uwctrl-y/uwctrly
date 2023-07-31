@@ -23,7 +23,7 @@ export default {
           letter.style.transform = "translateY(0)";
         }, index * 100);
       });
-    }, 500); // Adjust the delay before animation starts as per your preference
+    }, 400); // Adjust the delay before animation starts as per your preference
   },
 };
 </script>
@@ -32,13 +32,17 @@ export default {
 .section-heading {
   padding-top: 10vh;
   color: #E4E4D0;
-  font-size: 8rem;
+  font-size: 150px;
   font-style: normal;
   font-weight: 500;
   line-height: 11vh;
   text-transform: uppercase;
-  text-align: center;
+  text-align: left;
   width: 70vw;
+  /* overflow: hidden; */
+  display: flex;
+  column-gap: 40px;
+  letter-spacing: -9px;
 }
 
 .animated-word {
@@ -46,18 +50,19 @@ export default {
   opacity: 0;
   transform: translateY(100%);
   transition: opacity 0.5s, transform 0.5s;
-  /* Add your desired styles here */
+  height: max-content;
 }
 
 /* Add additional styles for the paragraph and italic elements if needed */
 .animated-word p {
   /* Styles for non-italic words */
   display: flex;
-  align-items: center;
+  align-items: right;
+  justify-content: flex-end;
   color: #E4E4D0;
-  font-size: 6rem;
+  font-size: 150px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .animated-word p i {
