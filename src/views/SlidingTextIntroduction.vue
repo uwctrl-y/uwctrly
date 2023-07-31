@@ -28,7 +28,7 @@ export default {
           letter.style.transform = "translateY(0)";
         }, index * 100);
       });
-    }, 500); // Adjust the delay before animation starts as per your preference
+    }, 1500); // Adjust the delay before animation starts as per your preference
 
     setTimeout(() => {
     animatedParagraphs.forEach((par, index) => {
@@ -37,7 +37,7 @@ export default {
           par.style.transform = "translateY(0)";
         }, index * 500);
       });
-    }, 500+(animatedLetters.length * 100)); // Adjust the delay before animation starts as per your preference
+    }, 1000 +(animatedLetters.length * 100)); // Adjust the delay before animation starts as per your preference
   },
 };
 </script>
