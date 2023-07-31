@@ -2,7 +2,6 @@
   <section>
     <div class="newsletter-section">
       <div class="newsletter-info">
-          <p class="newsletter-section-number">0.5</p>
           <h1 class="newsletter-section-heading">stay updated</h1>
           <svg class="newsletter-section-divider" width="71" height="71" viewBox="0 0 71 71" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M35.5001 71C40.8306 71 44 67.1485 44 62.97C44 59.4353 38.5995 46.306 36.4079 41.1235C36.0663 40.3157 34.942 40.3191 34.6048 41.1288C32.4213 46.3714 27 59.7157 27 62.97C27 67.1485 30.1695 71 35.5001 71Z" fill="#E4E4D0"/>
@@ -33,8 +32,10 @@
       <a href="" target="_blank" class="social-link">
         <img src="../assets/newsletterForm/mailIcon.svg" alt="Email">
       </a>
-    </div>  
+    </div> 
+    <img src="../assets/newsletterForm/newsletterFormFooterImage.svg" class="newsletter-form-footer" alt="Ctrl+y"> 
     </div>
+   
   </section>
 </template>
 
@@ -63,6 +64,7 @@ export default {
   /* flex-shrink: 1; */
   border-radius: 12px;
   background: #09702C;
+  overflow: hidden;
 }
 .newsletter-info {
   display: flex;
@@ -72,19 +74,9 @@ export default {
   margin-bottom: 8.75rem;
 }
 
-.newsletter-section-number {
-  color: #E4E4D0;
-  /* font-family: Roboto; */
-  font-size: 1.25rem;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 1.875rem; /* 150% */
-  letter-spacing: -0.0625rem;
-}
 .newsletter-section-heading {
   color: #E4E4D0;
   text-align: center;
-  /* font-family: Roboto; */
   font-size: 11.25rem;
   font-style: normal;
   font-weight: 500;
@@ -100,7 +92,6 @@ export default {
 
 .newsletter-section-subheading {
   color: #E4E4D0;
-  /* font-family: Roboto; */
   font-size: 1.875rem;
   font-style: normal;
   font-weight: 400;
@@ -125,13 +116,16 @@ export default {
   background: #09702C;
   color: #E4E4D0;
   border: 4px solid rgba(228, 228, 208, 0.50);
-  /* font-family: Roboto; */
   font-size: 2.5rem;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
   letter-spacing: -0.125rem;
   z-index: 1;
+}
+
+.newsletter-email-input::placeholder {
+  color: #E4E4D0;
 }
 
 .newsletter-email-submit {
@@ -145,7 +139,6 @@ export default {
   border-radius: 0.3125rem;
   background: #E4E4D0;
   color: #09702C;
-  /* font-family: Roboto; */
   font-size: 2.5rem;
   font-style: normal;
   font-weight: 500;
@@ -158,16 +151,19 @@ export default {
 .newsletter-section-socials {
   margin-top: 80px;
   display: flex;
-  justify-content: center; /* Center the social media links horizontally */
+  justify-content: center; 
   gap: 32px; /* Adjust the spacing between the logos */
   
 }
 
 .social-link {
-  display: block; /* Make the entire logo clickable */
-  width: 40px; /* Adjust the width of the logos as needed */
-  height: 40px; /* Adjust the height of the logos as needed */
+  display: block;
+  width: 40px; 
+  height: 40px;
   z-index: 1;
 }
 
+.newsletter-form-footer {
+  transform: translate(-20%, 65%);
+}
 </style>
