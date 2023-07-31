@@ -5,7 +5,6 @@
 
   font-weight: normal;
   background-image: url(@/assets/home/background.png);
-  /* background-size: cover; */
   background-position: center;
   overflow: hidden;
 }
