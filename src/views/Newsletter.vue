@@ -25,13 +25,13 @@
       </form> 
       <div class="newsletter-section-socials">
       <a href="https://www.instagram.com/" target="_blank" class="social-link">
-        <img src="../assets/instagramIcon.svg" alt="Instagram">
+        <img src="../assets/newsletterForm/instagramIcon.svg" alt="Instagram">
       </a>
       <a href="https://www.linkedin.com/" target="_blank" class="social-link">
-        <img src="../assets/linkedinIcon.svg" alt="LinkedIn">
+        <img src="../assets/newsletterForm/linkedinIcon.svg" alt="LinkedIn">
       </a>
       <a href="" target="_blank" class="social-link">
-        <img src="../assets/mailIcon.svg" alt="Email">
+        <img src="../assets/newsletterForm/mailIcon.svg" alt="Email">
       </a>
     </div>  
     </div>
