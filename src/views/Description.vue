@@ -44,9 +44,9 @@
 export default {
   data() {
     return {
-      panel1Parallax: -100,
-      panel2Parallax: 450,
-      panel3Parallax: 1000,
+      panel1Parallax: -50,
+      panel2Parallax: 500,
+      panel3Parallax: 1050,
       prevScrollDirection: 0
     };
   },
