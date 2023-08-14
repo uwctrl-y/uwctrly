@@ -6,7 +6,7 @@
     </div>
     <pre-introduction :reached-intro="reachedIntro"/>
     <introduction :reachedIntro="reachedIntro" />
-    <description/>
+    <WhatsGoingDown />
     <sponsors/>
     <faq/>
     <OurTeam/>
@@ -18,7 +18,7 @@
 import Home from "@/views/Home.vue";
 import About from "@/views/About.vue";
 import Introduction from "@/views/Introduction.vue";
-import Description from "@/views/Description.vue";
+import WhatsGoingDown from "./views/WhatsGoingDown.vue";
 import Newsletter from "@/views/Newsletter.vue"
 import SplashScreen from "@/components/splashScreen.vue";
 import SlidingText from "@/views/SlidingText.vue";
@@ -30,7 +30,7 @@ import '@/assets/css/scrollbar.css';
 
 export default { 
   name: 'App',
-  components: { PreIntroduction, SlidingText, SplashScreen, About, Home, Introduction, Description, Sponsors, Faq, OurTeam, Newsletter },
+  components: { PreIntroduction, SlidingText, SplashScreen, About, Home, Introduction, WhatsGoingDown, Sponsors, Faq, OurTeam, Newsletter },
   methods: {
     scroll() {
       window.onscroll = () => {
