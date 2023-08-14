@@ -74,6 +74,7 @@ export default {
   min-height: 400px;
   padding-bottom: 10vh;
   column-gap: 20px;
+  margin-bottom: -2px;
 }
 
 .eyes {
@@ -94,12 +95,11 @@ export default {
 .fade-in {
     opacity: 1;
     transform: translateY(-20px);
-    transition: opacity 2s, transform 1s; /* Transition duration for the fade effect */
+    transition: opacity 2s, transform 1s; 
   }
 
-/* Add your desired styles here */
 .pre-intro-1 {
-  margin-left: -15%;
+  margin-left: -12%;
 }
 
 .pre-intro-2 {
@@ -110,6 +110,81 @@ export default {
   margin-left: 15%;
 }
 
+@media screen and (max-width: 1400px) {
+  .eyes {
+    transform: scale(0.9);
+    margin-top: 12vh;
+    margin-left: -17vw;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .eyes {
+    transform: scale(0.8);
+    margin-top: 10vh;
+    margin-left: -18vw;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .eyes {
+    transform: scale(0.7);
+    margin-top: 10vh;
+    margin-left: -20vw;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .pre-introduction-section {
+    margin-top: -275px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    justify-content:flex-start;
+    margin-right: auto;
+    padding-right: 83px;
+    padding-left: 83px;
+  }
+  .pre-intro-1, .pre-intro-2, .pre-intro-3 {
+    margin-left: 0px;
+  }
+
+  .eyes {
+    transform: scale(0.55);
+    margin-top: 32vh;
+    margin-left: 55vw;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .pre-introduction-section {
+    margin-top: -250px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .eyes {
+    display: none;
+  }
+  .section-heading {
+    /* flex-wrap: wrap; */
+    margin-right: -100px;
+  } 
+  .pre-introduction-section {
+    margin-top: -200px;
+    padding-top: 40px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .pre-introduction-section {
+    padding: 60px 40px 80px 40px;
+    margin-top: -150px
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .pre-introduction-section {
+    margin-bottom: -100px;
+  }
+}
 
 
 </style>
