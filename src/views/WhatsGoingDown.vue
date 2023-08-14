@@ -43,11 +43,19 @@
 <script>
 export default {
   data() {
+    if (window.innerWidth >= 1200) {
+      return {
+        panel1Parallax: 100,
+        panel2Parallax: 900,
+        panel3Parallax: 1700,
+        prevScrollDirection: 0
+      };
+    }
     if (window.innerWidth >= 768) {
       return {
-        panel1Parallax: -50,
-        panel2Parallax: 500,
-        panel3Parallax: 1050,
+        panel1Parallax: 0,
+        panel2Parallax: 800,
+        panel3Parallax: 1600,
         prevScrollDirection: 0
       };
     }
@@ -57,15 +65,21 @@ export default {
   },
   methods: {
     Parallax(event) {
-      if (window.innerWidth >= 768) {
-      const scroll = window.scrollY;
-      const scrollDirection = event.deltaY > 0 ? 1 : -1;
-      const scrollDiff = scroll - this.prevScrollDirection;
-      this.prevScrollDirection = scroll;
-      this.panel1Parallax += scrollDiff * -0.03 * scrollDirection;
-      this.panel2Parallax += scrollDiff * 0.1 * scrollDirection;
-      this.panel3Parallax += scrollDiff * 0.23 * scrollDirection;
-      }
+      
+        const scroll = window.scrollY;
+        const scrollDirection = event.deltaY > 0 ? 1 : -1;
+        const scrollDiff = scroll - this.prevScrollDirection;
+        this.prevScrollDirection = scroll;
+        if (window.innerWidth >= 1200) {
+          this.panel1Parallax += scrollDiff * -0.12 * scrollDirection;
+          this.panel2Parallax += scrollDiff * 0.08 * scrollDirection;
+          this.panel3Parallax += scrollDiff * 0.28 * scrollDirection;
+        }
+        else if (window.innerWidth >= 768) {
+          this.panel1Parallax += scrollDiff * -0.12 * scrollDirection;
+          this.panel2Parallax += scrollDiff * 0.11 * scrollDirection;
+          this.panel3Parallax += scrollDiff * 0.34 * scrollDirection;
+        }
     },
   },
   beforeDestroy() {
@@ -86,6 +100,7 @@ export default {
   text-size-adjust: 100%;
   margin-top: 100px;
   overflow: visible;
+  margin-bottom: 400px;
 }
  .whats-going-down-title {
     color: #09702C;
@@ -117,7 +132,7 @@ export default {
     line-height: 40px;
     letter-spacing: -1.5px;
     /* margin-bottom: 447px; */
-    margin-bottom: 109px;
+    margin-bottom: -350px;
   }
   .panel {
     width: panel-img;
@@ -189,6 +204,7 @@ export default {
     }
     .whats-going-down-subheading {
       font-size: 28px;
+      margin-bottom: -200px
     }
     .panel-heading {
       font-size: 60px;
