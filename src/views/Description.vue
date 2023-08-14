@@ -15,21 +15,21 @@
         </div>
         <div class="row">
           <div class="panel" :style="{ transform: `translateY(${panel1Parallax}px)` }">
-            <img class="panel-img" src="../assets/descriptionPanel1.png" alt="Image 1">
+            <img class="panel-img" src="../assets/whatsGoingDown/descriptionPanel1.png" alt="Image 1">
             <div class="panel-content">
                 <h1 class="panel-heading">48 hours</h1>
                 <p class="panel-text">Design a solution to the given problem in a weekend.</p>
             </div>
           </div>
           <div class="panel" :style="{ transform: `translateY(${panel2Parallax}px)` }">
-            <img class="panel-img" src="../assets/descriptionPanel2.png" alt="Image 2">
+            <img class="panel-img" src="../assets/whatsGoingDown/descriptionPanel2.png" alt="Image 2">
             <div class="panel-content">
                 <h1 class="panel-heading">No coding involved.</h1>
                 <p class="panel-text">Ideation and UI/UX design on Figma only!</p>
             </div>
           </div>
           <div class="panel" :style="{ transform: `translateY(${panel3Parallax}px)` }">
-            <img class="panel-img" src="../assets/descriptionPanel3.png" alt="Image 3">
+            <img class="panel-img" src="../assets/whatsGoingDown/descriptionPanel3.png" alt="Image 3">
             <div class="panel-content">
                 <h1 class="panel-heading">Offline.</h1>
                 <p class="panel-text">Join us for our in-person event at the University of Waterloo</p>
@@ -43,12 +43,14 @@
 <script>
 export default {
   data() {
-    return {
-      panel1Parallax: -50,
-      panel2Parallax: 500,
-      panel3Parallax: 1050,
-      prevScrollDirection: 0
-    };
+    if (window.innerWidth >= 768) {
+      return {
+        panel1Parallax: -50,
+        panel2Parallax: 500,
+        panel3Parallax: 1050,
+        prevScrollDirection: 0
+      };
+    }
   },
   mounted() {
     window.addEventListener('scroll', this.Parallax);
@@ -59,10 +61,11 @@ export default {
       const scrollDirection = event.deltaY > 0 ? 1 : -1;
       const scrollDiff = scroll - this.prevScrollDirection;
       this.prevScrollDirection = scroll;
-
+      if (window.innerWidth >= 768) {
       this.panel1Parallax += scrollDiff * -0.03 * scrollDirection;
       this.panel2Parallax += scrollDiff * 0.1 * scrollDirection;
       this.panel3Parallax += scrollDiff * 0.23 * scrollDirection;
+      }
     },
   },
   beforeDestroy() {
@@ -127,16 +130,9 @@ export default {
     gap: 20px;
     width: 30%;
     position: relative;
-    /* scroll-snap-align: start; */
     z-index: 1;
     transition: transform 0.05s;
   }
-  /* .panel:nth-child(2) {
-      transform: translateY(169px);
-    }
-    .panel:nth-child(3) {
-        transform: translateY(338px);
-    } */
 
   .row {
     display: flex;
@@ -144,11 +140,21 @@ export default {
     justify-content:space-between;
     gap: 60px;
     height: 150vh;
-    /* overflow-x: scroll; */
-    /* perspective: 1px; */
     scroll-snap-type: y mandatory;
+     
   }
-  
+  @media (max-width: 768px) {
+    .row {
+      flex-direction: column;
+      height: auto;
+      gap: 100px;
+      align-items: center;
+      margin-bottom: 100px;
+    }
+    .panel {
+      width: 80vw;
+    }
+  }
   .panel img {
     width: 100%;
   }
