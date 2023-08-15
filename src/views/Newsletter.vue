@@ -33,9 +33,10 @@
         <img src="../assets/newsletterForm/mailIcon.svg" alt="Email">
       </a>
     </div> 
-    <img src="../assets/newsletterForm/newsletterFormFooterImage.svg" class="newsletter-form-footer" alt="Ctrl+y"> 
     </div>
-   
+    <footer class="newsletter-form-footer">
+      <img src="../assets/newsletterForm/newsletterFormFooterImage.svg" alt="Ctrl+y"> 
+    </footer>
   </section>
 </template>
 
@@ -61,10 +62,11 @@ export default {
 .newsletter-section {
   padding: 106px 18rem;
   justify-content: center;
-  /* flex-shrink: 1; */
-  border-radius: 12px;
+  border-top-right-radius: 16px;
+  border-top-left-radius: 16px;
   background: #09702C;
   overflow: hidden;
+  margin-bottom: -2px;
 }
 .newsletter-info {
   display: flex;
@@ -72,6 +74,8 @@ export default {
   align-items: center;
   gap: 1.8125rem;
   margin-bottom: 8.75rem;
+  margin-right: -30%;
+  margin-left: -30%;
 }
 
 .newsletter-section-heading {
@@ -97,6 +101,7 @@ export default {
   font-weight: 400;
   line-height: 2.5rem; /* 133.333% */
   letter-spacing: -0.09375rem;
+  text-align: center;
 }
 
 .newsletter-form {
@@ -152,18 +157,190 @@ export default {
   margin-top: 80px;
   display: flex;
   justify-content: center; 
-  gap: 32px; /* Adjust the spacing between the logos */
+  gap: 32px;
+  margin-bottom: 112px;
   
 }
 
 .social-link {
   display: block;
-  width: 40px; 
-  height: 40px;
   z-index: 1;
 }
 
 .newsletter-form-footer {
-  transform: translate(-20%, 65%);
+  display: flex;
+  background: #09702C;
+  justify-content: flex-end;
+  align-items: flex-end;
+  height: 110%;
+  margin-top: auto;
+}
+
+.newsletter-form-footer img {
+    max-width: 100%;
+  }
+
+@media screen and (max-width: 1350px) {
+  .newsletter-section {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .newsletter-section-heading {
+    font-size: 150px;
+  }
+  .newsletter-form {
+    width: 60vw;
+    justify-content: center;
+    margin-left: 20%;
+  }
+
+  .newsletter-email-input {
+    font-size: 34px;
+  }
+  .newsletter-email-submit {
+    font-size: 34px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .newsletter-section-heading {
+    font-size: 100px;
+    letter-spacing: -4.5px;
+  }
+  .newsletter-section-subheading {
+    font-size: 24px;
+  }
+  .newsletter-email-input {
+    font-size: 30px;
+  }
+  .newsletter-email-submit {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .newsletter-section-heading {
+    font-size: 80px;
+    letter-spacing: -4.5px;
+    line-height: 110px;
+  }
+
+  .newsletter-section-subheading {
+    margin-bottom: -40px;
+  }
+
+  .newsletter-section-divider {
+    width: 60px;
+    height: 60px;
+  }
+  .newsletter-email-input {
+    font-size: 28px;
+    padding: 0.8rem;
+  }
+  .newsletter-email-submit {
+    font-size: 28px;
+    padding: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .newsletter-section {
+    margin-bottom: -80px;
+  }
+  .newsletter-section-heading {
+    margin: 0 200px;
+  }
+  .newsletter-form {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .newsletter-email-input {
+    width: 100%;
+  }
+  .newsletter-email-submit {
+    margin-left: 0;
+  }
+
+  .social-link img {
+    width: 40px;
+    height: 40px;
+  }
+
+  
+}
+
+@media screen and (max-width: 500px) {
+  .newsletter-section {
+    margin-bottom: -100px;
+  }
+  .newsletter-section-subheading {
+    margin: 0 200px -40px 200px;
+  }
+
+  .newsletter-section-divider {
+    width: 50px;
+    height: 50px;
+  }
+  .social-link img {
+    width: 35px;
+    height: 35px;
+  }
+
+}
+
+@media screen and (max-width: 400px) {
+  .newsletter-section-heading {
+    font-size: 60px;
+    line-height: 60px;
+    letter-spacing: -2.5px;
+  }
+  .newsletter-section-subheading {
+    font-size: 20px;
+    line-height: 28px;
+    margin: 0 150px -50px 150px;
+  }
+
+  .newsletter-section-divider {
+    width: 40px;
+    height: 40px;
+  }
+
+  .newsletter-email-input {
+    font-size: 24px;
+  }
+  .newsletter-email-submit {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .newsletter-section {
+    margin-bottom: -130px;
+  }
+  .newsletter-section-heading {
+    font-size: 40px;
+    line-height: 60px;
+    letter-spacing: -2px;
+  }
+  .newsletter-section-subheading {
+    font-size: 18px;
+  }
+  .newsletter-section-divider {
+    width: 30px;
+    height: 30px;
+  }
+  .newsletter-email-input {
+    font-size: 20px;
+  }
+  .newsletter-email-submit {
+    font-size: 20px;
+  }
+
+  .social-link img {
+    width: 30px;
+    height: 30px;
+  }
 }
 </style>
