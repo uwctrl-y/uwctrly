@@ -104,7 +104,8 @@ export default {
     letter-spacing: -6px;
   }
   .section-heading {
-  padding-top: 3vh;
+    padding-top: 3vh;
+    column-gap: 30px;
   }
 }
 
@@ -121,12 +122,16 @@ export default {
     font-size: 74px;
   }
   .section-heading {
-  padding-top: 0;
+    padding-top: 0;
+    column-gap: 22px;
   }
 }
 @media screen and (max-width: 600px) {
   .animated-word p {
     font-size: 64px;
+  }
+  .section-heading {
+    column-gap: 18px;
   }
 }
 @media screen and (max-width: 400px) {

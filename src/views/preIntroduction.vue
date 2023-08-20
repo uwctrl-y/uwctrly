@@ -36,22 +36,33 @@ export default {
   components: { SlidingTextPreIntroduction },
   props: ['reachedIntro'],
   data() {
-    const sentenceString1 = "WOULD YOU LIKE..."
-    const sentenceArray1 = sentenceString1.split(" ").map(string => ({ content: string,}))
-    const sentenceString2 = "TO DESIGN"
-    const sentenceArray2 = sentenceString2.split(" ").map(string => ({ content: string,}))
-    const sentenceString3 = "THE FUTURE?"
-    const sentenceArray3 = sentenceString3.split(" ").map(string => ({ content: string, italic: string === "FUTURE?"}))
-    return {
-      heading1: sentenceArray1,
-      heading2: sentenceArray2,
-      heading3: sentenceArray3,
-      sectionClass1: 'section-heading1',
-      animatedWordClass: 'animated-word',
-      sectionClass2: 'section-heading2',
-      sectionClass3: 'section-heading3'
-    };
-  },
+    if (visualViewport >= 700) {
+      const sentenceString1 = "WOULD YOU LIKE..."
+      const sentenceArray1 = sentenceString1.split(" ").map(string => ({ content: string,}))
+      const sentenceString2 = "TO DESIGN"
+      const sentenceArray2 = sentenceString2.split(" ").map(string => ({ content: string,}))
+      const sentenceString3 = "THE FUTURE?"
+      const sentenceArray3 = sentenceString3.split(" ").map(string => ({ content: string, italic: string === "FUTURE?"}))
+      return {
+        heading1: sentenceArray1,
+        heading2: sentenceArray2,
+        heading3: sentenceArray3,
+        sectionClass1: 'section-heading1',
+        animatedWordClass: 'animated-word',
+        sectionClass2: 'section-heading2',
+        sectionClass3: 'section-heading3'
+      };
+    }
+    else {
+      const sentenceString1 = "WOULD YOU LIKE...TO DESIGN THE FUTURE"
+      const sentenceArray1 = sentenceString1.split(" ").map(string => ({ content: string}))
+      return {
+        heading1: sentenceArray1,
+        sectionClass1: 'section-heading1',
+        animatedWordClass: 'animated-word',
+      };
+    }
+  }, 
   computed: {
     sectionHeadingClass() {
       // Add additional classes or modify the existing class as needed
@@ -169,6 +180,7 @@ export default {
   } 
   .pre-introduction-section {
     margin-top: -200px;
+    margin-bottom: -90px;
     padding-top: 40px;
   }
 }
