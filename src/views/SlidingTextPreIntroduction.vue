@@ -123,6 +123,7 @@ export default {
   }
   .section-heading {
     padding-top: 0;
+    flex-wrap: wrap;
     column-gap: 22px;
   }
 }

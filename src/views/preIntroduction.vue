@@ -36,7 +36,7 @@ export default {
   components: { SlidingTextPreIntroduction },
   props: ['reachedIntro'],
   data() {
-    if (visualViewport >= 700) {
+    if (window.innerWidth >= 700) {
       const sentenceString1 = "WOULD YOU LIKE..."
       const sentenceArray1 = sentenceString1.split(" ").map(string => ({ content: string,}))
       const sentenceString2 = "TO DESIGN"
