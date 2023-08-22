@@ -32,7 +32,7 @@ export default {
 .section-heading {
   padding-top: 10vh;
   color: #E4E4D0;
-  font-size: 150px;
+  font-size: 0px;
   font-style: normal;
   font-weight: 500;
   line-height: 11vh;
@@ -68,4 +68,81 @@ export default {
 .animated-word p i {
   /* Styles for italic words */
 }
+
+@media screen and (max-width: 1500px) {
+  .animated-word p {
+    font-size: 130px;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .animated-word p {
+    font-size: 120px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .animated-word p {
+    font-size: 110px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .animated-word p {
+    font-size: 100px;
+    letter-spacing: -6.5px;
+  }
+  .section-heading {
+    padding-top: 6vh;
+  }
+}
+
+
+@media screen and (max-width: 1000px) {
+  .animated-word p {
+    font-size: 90px;
+    letter-spacing: -6px;
+  }
+  .section-heading {
+    padding-top: 3vh;
+    column-gap: 30px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .animated-word p {
+    font-size: 80px;
+    letter-spacing: -5.5px;
+  }
+  
+}
+
+@media screen and (max-width: 800px) {
+  .animated-word p {
+    font-size: 74px;
+  }
+  .section-heading {
+    padding-top: 0;
+    flex-wrap: wrap;
+    column-gap: 22px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .animated-word p {
+    font-size: 64px;
+  }
+  .section-heading {
+    column-gap: 18px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .animated-word p {
+    font-size: 44px;
+    letter-spacing: -1px;
+    line-height: 40px;
+  }
+}
+
+
+
 </style>
