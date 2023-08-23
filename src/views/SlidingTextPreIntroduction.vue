@@ -32,14 +32,12 @@ export default {
 .section-heading {
   padding-top: 10vh;
   color: #E4E4D0;
-  font-size: 0px;
   font-style: normal;
   font-weight: 500;
-  line-height: 11vh;
+  line-height: 8vh;
   text-transform: uppercase;
   text-align: left;
   width: 70vw;
-  /* overflow: hidden; */
   display: flex;
   column-gap: 40px;
   letter-spacing: -9px;

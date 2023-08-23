@@ -85,6 +85,7 @@ export default {
   min-height: 400px;
   padding-bottom: 10vh;
   column-gap: 20px;
+  padding-top: 5vh;
   margin-bottom: -2px;
 }
 
@@ -98,7 +99,7 @@ export default {
   position: absolute;
   /* left: 35%;
   top: 1260px; */
-  margin-left: -9vw;
+  margin-left: -4vw;
   margin-top: 15vh;
   opacity: 0;
 }
@@ -110,15 +111,15 @@ export default {
   }
 
 .pre-intro-1 {
-  margin-left: -12%;
+  margin-left: -10%;
 }
 
 .pre-intro-2 {
-  margin-left: 55%;
+  margin-left: 58%;
 }
 
 .pre-intro-3 {
-  margin-left: 15%;
+  margin-left: 18%;
 }
 
 @media screen and (max-width: 1400px) {
