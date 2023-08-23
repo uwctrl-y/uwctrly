@@ -1,5 +1,5 @@
 <template>
-  <splash-screen v-if="isLoading" :isLoading="isLoading" />
+  <SplashScreen v-if="isLoading" :isLoading="isLoading" />
   <main v-if="!isLoading">
     <div ref="componentsBeforeIntro">
       <home />
@@ -20,7 +20,7 @@ import About from "@/views/About.vue";
 import Introduction from "@/views/Introduction.vue";
 import WhatsGoingDown from "./views/WhatsGoingDown.vue";
 import Newsletter from "@/views/Newsletter.vue"
-import SplashScreen from "@/components/splashScreen.vue";
+import SplashScreen from "@/components/SplashScreen.vue";
 import SlidingText from "@/views/SlidingText.vue";
 import PreIntroduction from "@/views/preIntroduction.vue";
 import Sponsors from "./views/Sponsors.vue";
@@ -49,12 +49,14 @@ export default {
       aboutHeight: 0
     };
   },
-  mounted() {
-    this.scroll();
-    setTimeout(() => {
-      this.isLoading = false;
-    }, 1800);
-  }
+    mounted() {
+        this.scroll();
+
+        setTimeout(() => {
+            this.isLoading = false;
+            console.log("poop")
+        }, 2000);
+    },
 };
 </script>
 <style></style>

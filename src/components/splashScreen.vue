@@ -1,47 +1,44 @@
 <template>
-  <div class="splash-screen">
-    <div :class="{ loader: true, fadeout: !isLoading, keys}">
-      <img src="@/assets/home/keyanimated.gif" alt="">
+    <div class="SplashScreen">
+        <div v-if="isLoading" class="loader">
+            <img src="@/assets/home/keyanimated.gif" alt="">
+        </div>
     </div>
-  </div>
 </template>
 
 <script>
-export default{
-  name: "splashScreen",
-  props: ["isLoading"],
-}
+export default {
+    name: "SplashScreen",
+    props: ["isLoading"],
+    mounted() {
+        console.log("isLoading:", this.isLoading);
+    }
+};
 </script>
 
-<style>
-.splash-screen{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: transparent;
-  z-index: 1;
-  overflow: hidden;
+<style scoped>
+.SplashScreen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    z-index: 1;
+    overflow: hidden;
 }
 
-.keys{
-  width: 38%;
+.loader {
+    opacity: 1;
+    transition: opacity 0.4s ease-in-out;
 }
 
-.fadeout {
-  animation: fadeout 0.2s forwards;
-}
-
-@keyframes fadeout {
-  to {
+.loader.hidden {
     opacity: 0;
     visibility: hidden;
-  }
 }
-
 </style>
