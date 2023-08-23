@@ -122,17 +122,17 @@ export default {
   margin-left: 18%;
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1600px) {
   .eyes {
     transform: scale(0.9);
     margin-top: 12vh;
-    margin-left: -17vw;
+    margin-left: -19vw;
   }
   .pre-intro-1 {
       margin-left: -10%;
   }
   .pre-intro-2 {
-      margin-left: 48%;
+      margin-left: 47%;
   }
   .pre-intro-3 {
       margin-left: 18%;
@@ -167,7 +167,6 @@ export default {
   .pre-intro-1, .pre-intro-2, .pre-intro-3 {
     margin-left: 0px;
   }
-
   .eyes {
     transform: scale(0.55);
     margin-top: 32vh;
