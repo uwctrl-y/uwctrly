@@ -66,7 +66,7 @@ export default {
 }
 
 .animated-word p i {
-  /* Styles for italic words */
+  font-weight: 500;
 }
 
 @media screen and (max-width: 1500px) {
