@@ -2,9 +2,7 @@
   <nav class="nav-bar">
     <img class="logo" src="@/assets/home/CTRL+y-Nav.png" alt="Logo">
     <ul class="navbar-list">
-      <li class="navbar-item">
-        <router-link to="/About">about</router-link>
-      </li>
+      <li class="navbar-item">about</li>
       <li class="navbar-item">sponsors</li>
       <li class="navbar-item">judges</li>
       <li class="navbar-item">faq</li>
