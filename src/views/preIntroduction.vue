@@ -98,7 +98,7 @@ export default {
   position: absolute;
   /* left: 35%;
   top: 1260px; */
-  margin-left: -15vw;
+  margin-left: -9vw;
   margin-top: 15vh;
   opacity: 0;
 }
@@ -106,7 +106,7 @@ export default {
 .fade-in {
     opacity: 1;
     transform: translateY(-20px);
-    transition: opacity 2s, transform 1s; 
+    transition: opacity 2s, transform 1.5s;
   }
 
 .pre-intro-1 {
@@ -114,7 +114,7 @@ export default {
 }
 
 .pre-intro-2 {
-  margin-left: 50%;
+  margin-left: 55%;
 }
 
 .pre-intro-3 {

@@ -130,7 +130,7 @@ export default {
   line-height: 30px;
   letter-spacing: -3px;
   text-size-adjust: 100%;
-  padding-bottom: 1rem;
+  padding-bottom: 0rem;
   padding-top: 3rem;
 }
 
@@ -141,9 +141,13 @@ export default {
   text-align: center;
   text-size-adjust: 100%;
   display: inline-block; /* Added display property */
-  max-width: 30%; /* Set a maximum width for wrapping */
+  max-width: 25%; /* Set a maximum width for wrapping */
   line-height: 25px;
   letter-spacing: -1.5px;
+}
+
+.hero-image-container {
+    padding-top: 4vh;
 }
 
 .hero-image-container svg {
@@ -154,14 +158,15 @@ export default {
 
 .hero-tv-container svg {
   padding-top: 4rem;
-  width: 80vw;
+  width: 70vw;
   height: auto;
   text-size-adjust: 100%;
   justify-content: center;
-  margin-left: 35vw;
+  margin-left: 40vw;
 }
 
 .content-container {
+  padding-top: 3.5vh;
   text-size-adjust: 100%;
 }
 

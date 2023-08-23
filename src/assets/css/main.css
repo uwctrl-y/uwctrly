@@ -2,11 +2,11 @@
 
 #app {
   margin: 0 auto;
-
   font-weight: normal;
   background-image: url(@/assets/home/background.png);
   background-position: center;
   overflow: hidden;
+  font-family: 'Roboto', sans-serif;
 }
 
 a,
