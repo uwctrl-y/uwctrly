@@ -187,12 +187,12 @@ template {
   }
 }
 
-.tv-shadow path:nth-child(1){
-  fill: transparent;
-  transition: fill 0.5s; 
+.tv-shadow path:nth-child(1) {
+    fill: transparent;
+    transition: fill 0.5s linear; /* Added "linear" timing function */
 }
 
-.tv-shadow path:nth-child(1).in-view{
-  fill: #09702C;
+.tv-shadow path:nth-child(1).in-view {
+    fill: #09702C;
 }
 </style>
