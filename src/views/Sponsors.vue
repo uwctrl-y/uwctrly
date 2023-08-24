@@ -11,7 +11,9 @@
       <div class="buttons">
         <div class="button-top">
           <div>see sponsorship package</div>
-          <img ref="graphic" src="../assets/expandArrow.svg" />
+            <a :href="pdfUrl" target="_blank" rel="noopener noreferrer">
+                <img ref="graphic" src="../assets/expandArrow.svg" />
+            </a>
         </div>
         <div class="button-bottom">
           <div>contact us</div>
@@ -42,11 +44,12 @@
 </template>
 
 <script>
-
+import pdf from "../assets/externalFiles/CorporatePackage.pdf";
 export default {
   data() {
     return {
-      windowWidth: window.innerWidth
+      windowWidth: window.innerWidth,
+      pdfUrl: pdf
     }
   },
 

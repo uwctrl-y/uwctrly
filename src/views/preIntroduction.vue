@@ -23,7 +23,7 @@
             v-if="reachedIntro"
         />
       </div>
-      <img :class="{ 'fade-in': reachedIntro }" class="eyes" src="../assets/preIntroduction/eyes.svg" />
+      <img :class="{ 'fade-in': reachedIntro, 'shake-on-hover': opacityTransitionCompleted }" class="eyes" src="../assets/preIntroduction/eyes.svg" @transitionend="handleTransitionEnd" />
     </div>
   </section>
 </template>
@@ -50,7 +50,8 @@ export default {
         sectionClass1: 'section-heading1',
         animatedWordClass: 'animated-word',
         sectionClass2: 'section-heading2',
-        sectionClass3: 'section-heading3'
+        sectionClass3: 'section-heading3',
+        opacityTransitionCompleted: false
       };
     }
     else {
@@ -69,6 +70,11 @@ export default {
       return 'section-heading1 custom-class', 'section-heading2 custom-class', 'section-heading3 custom-class';
     },
   },
+    methods: {
+        handleTransitionEnd() {
+            this.opacityTransitionCompleted = true;
+        },
+    }
 }
 </script>
 
@@ -100,15 +106,29 @@ export default {
   /* left: 35%;
   top: 1260px; */
   margin-left: -4vw;
-  margin-top: 15vh;
+  margin-top: 9vh;
   opacity: 0;
 }
 
 .fade-in {
     opacity: 1;
-    transform: translateY(-20px);
+    //transform: translateY(-20px);
     transition: opacity 2s, transform 1.5s;
-  }
+    animation: shake 3s
+}
+
+.shake-on-hover:hover{
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+}
+@keyframes shake {
+    0%, 100% { transform: rotate(0deg); }
+    10%, 90% { transform: rotate(-2deg); } /* Increased rotation angles */
+    20%, 80% { transform: rotate(2deg); }  /* Increased rotation angles */
+    30%, 70% { transform: rotate(0deg); }
+    40%, 60% { transform: rotate(2deg); }  /* Increased rotation angles */
+    50% { transform: rotate(-2deg); }       /* Increased rotation angles */
+}
 
 .pre-intro-1 {
   margin-left: -10%;
