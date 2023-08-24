@@ -1,13 +1,13 @@
 <template>
   <nav class="nav-bar">
     <img class="logo" src="@/assets/home/CTRL+y-Nav.png" alt="Logo">
-    <ul class="navbar-list">
-      <li class="navbar-item">about</li>
-      <li class="navbar-item">sponsors</li>
-      <li class="navbar-item">judges</li>
-      <li class="navbar-item">faq</li>
-      <li class="navbar-item">team</li>
-    </ul>
+    <div class="navbar-list">
+      <a class="navbar-item" href="#/about" @click="scrollToSection($event, 'about')">about</a>
+      <a class="navbar-item" href="#/sponsors">sponsors</a>
+      <a class="navbar-item" href="#/judges">judges</a>
+      <a class="navbar-item" href="#/faq">faq</a>
+      <a class="navbar-item" href="#/ourTeam">team</a>
+    </div>
     <div class="navbar-item">
       <div>
         interested?
@@ -17,6 +17,41 @@
     </div>
   </nav>
 </template>
+
+<script setup>
+import {ref} from 'vue'
+import About from "@/views/About.vue";
+import Sponsors from "@/views/Sponsors.vue";
+import faq from "@/views/Faq.vue";
+import ourTeam from "@/views/OurTeam.vue";
+import Judges from "@/views/Judges.vue";
+
+const routes = {
+    '/about': About,
+    '/sponsors': Sponsors,
+    '/judges': Judges,
+    '/faq': faq,
+    '/ourTeam': ourTeam
+}
+
+const scrollToSection = (event, sectionId) => {
+    event.preventDefault();
+    const targetSection = document.getElementById(sectionId);
+    if (targetSection) {
+        targetSection.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+        });
+    }
+    console.log("poop")
+}
+
+const currentPath = ref(window.location.hash)
+
+window.addEventListener('hashchange', () => {
+    currentPath.value = window.location.hash
+})
+</script>
 
 <style>
 .nav-bar {
@@ -51,6 +86,3 @@
 }
 
 </style>
-
-<script setup>
-</script>

@@ -1,26 +1,28 @@
 <template>
-  <section class="about-section" ref="about">
-    <div class="content-container" data-aos="fade-up">
-      <h1 class="about-title">About CTRL + Y</h1>
-      <p class="about-description">
-        CTRL + y is a designathon with the focus of designing innovative solutions for the rapidly evolving future of tech. We’re looking for like-minded people who are invested in our mission, and share similar passions for this project.
-      </p>
-      <div class="cta-button-container">
-        <a
-            class="cta-button"
-            href="https://www.notion.so/ctrl-plus-y/CTRL-y-Open-Positions-cc3896a8f9a84e97a6383bbb9dba6f585"
-            target="_blank">
-          <i>Sign Up!</i>
-        </a>
-      </div>
+    <div id="about">
+        <section class="about-section" ref="about">
+            <div class="content-container" data-aos="fade-up">
+                <h1 class="about-title">About CTRL + Y</h1>
+                <p class="about-description">
+                    CTRL + y is a designathon with the focus of designing innovative solutions for the rapidly evolving future of tech. We’re looking for like-minded people who are invested in our mission, and share similar passions for this project.
+                </p>
+                <div class="cta-button-container">
+                    <a
+                            class="cta-button"
+                            href="https://www.notion.so/ctrl-plus-y/CTRL-y-Open-Positions-cc3896a8f9a84e97a6383bbb9dba6f585"
+                            target="_blank">
+                        <i>Sign Up!</i>
+                    </a>
+                </div>
+            </div>
+            <div class="about-img-container" data-aos="fade-up">
+                <img
+                        class="svg-filter"
+                        src="../assets/zee.svg"
+                />
+            </div>
+        </section>
     </div>
-    <div class="about-img-container" data-aos="fade-up">
-      <img
-          class="svg-filter"
-          src="../assets/zee.svg"
-      />
-    </div>
-  </section>
 </template>
 
 <script>
