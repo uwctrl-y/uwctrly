@@ -145,7 +145,7 @@ export default {
 @media screen and (max-width: 1600px) {
   .eyes {
     transform: scale(0.8);
-    margin-top: 12vh;
+    margin-top: 10vh;
     margin-left: -21vw;
   }
   .pre-intro-1 {
@@ -157,6 +157,7 @@ export default {
   .pre-intro-3 {
       margin-left: 11.5%;
   }
+
 }
 @media screen and (max-width: 1300px) {
   .eyes {
