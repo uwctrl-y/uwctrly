@@ -45,11 +45,10 @@ export default {
 <style>
 .headingText {
   position: relative;
-  font-size: 84px !important;
+  font-size: 5vw;
   font-weight: 500;
-  line-height: 94px;
+  line-height: calc(5vw + 10px);
   letter-spacing: -4.2px;
-  /* overflow: hidden; */
   display: flex;
   flex-wrap: wrap;
   column-gap: 15px;
@@ -57,10 +56,10 @@ export default {
 
 .paragraphText {
   margin-top: 60px;
-  font-size: 30px;
+  font-size: 2vw;
   font-weight: 400;
-  line-height: 40px;
-  letter-spacing: -1.5px;
+  line-height: calc(2vw + 6px);
+  letter-spacing: -0.07vw;
 }
 
 .animated-word {
@@ -79,38 +78,47 @@ export default {
   margin-bottom: 30px;
 }
 
-@media screen and (max-width: 1070px) {
-  .headingText {
-    font-size: 74px !important;
-    line-height: 84px;
+@media screen and (max-width: 1150px) {
+  .paragraphText {
+    margin-top: 2em;
   }
 }
 
-@media screen and (max-width: 715px) {
+@media screen and (max-width: 900px) {
   .headingText {
-    font-size: 64px !important;
-    line-height: 74px;
+    font-size: 7vw;
+    letter-spacing: -3px;
   }
 
   .paragraphText {
-    font-size: 25px;
-    line-height: 35px;
+    font-size: 2.5vw;
+    line-height: calc(2.5vw + 6px);
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 650px) {
   .headingText {
-    font-size: 34px !important;
-    line-height: 44px;
-    letter-spacing: -2px;
+    font-size: 6vw;
+    letter-spacing: -2.5px;
+  }
+
+  .paragraphText {
+    font-size: 2.5vw;
+    line-height: calc(2.5vw + 6px);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .headingText {
+    font-size: 5.5vw;
+    letter-spacing: -1.5px;
     column-gap: 8px;
   }
 
   .paragraphText {
-    font-size: 15px;
-    line-height: 25px;
     letter-spacing: -0.5px;
     margin-top: 30px;
+    font-size: 3vw;
   }
 
   .animated-paragraphs {

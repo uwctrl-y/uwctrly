@@ -167,6 +167,10 @@ export default {
   z-index: 1;
 }
 
+a:hover {
+  background-color: transparent;
+}
+
 .newsletter-form-footer {
   display: flex;
   background: #09702C;

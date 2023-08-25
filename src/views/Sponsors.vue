@@ -9,16 +9,18 @@
     <div class="join-sponsor">
       <div class="heading">Join CTRL + y as a <i>sponsor</i>.</div>
       <div class="buttons">
-        <div class="button-top">
-          <div>see sponsorship package</div>
-            <a :href="pdfUrl" target="_blank" rel="noopener noreferrer">
-                <img ref="graphic" src="../assets/expandArrow.svg" />
-            </a>
-        </div>
+        <a :href="pdfUrl" target="_blank" rel="noopener noreferrer">
+          <div class="button-top">
+            <div>see sponsorship package</div>
+            <img ref="graphic" src="../assets/expandArrow.svg" />
+          </div>
+        </a>
+        <a href="mailto:ctrlplusy2023@gmail.com">
         <div class="button-bottom">
           <div>contact us</div>
           <img ref="graphic" src="../assets/expandArrowGreen.svg" />
         </div>
+      </a>
       </div>
       <div class="subheading">Help us provide an invaluable experience to aspiring designers by joining us as a
         sponsor. Support their
@@ -29,7 +31,8 @@
       <img ref="graphic" src="../assets/sponsorLogoExample1.svg" />
       <div>
         <div class="sponsor-name-one">Your name could be here.</div>
-        <div class="sponsor-desc-one"> And your logo could be in the card <span v-if="windowWidth < 800">above</span><span v-else>to the left</span>! Check out our sponsorship package
+        <div class="sponsor-desc-one"> And your logo could be in the card <span v-if="windowWidth < 800">above</span><span
+            v-else>to the left</span>! Check out our sponsorship package
           or email us for more information.</div>
         <div class="sponsor-button-one">Your website could be linked here!</div>
       </div>
@@ -59,11 +62,11 @@ export default {
     })
   },
 
-  beforeDestroy() { 
-    window.removeEventListener('resize', this.onResize); 
+  beforeDestroy() {
+    window.removeEventListener('resize', this.onResize);
   },
 
-  methods: {  
+  methods: {
     onResize() {
       this.windowWidth = window.innerWidth
     }
@@ -139,12 +142,15 @@ export default {
 .button-top,
 .button-bottom {
   display: flex;
-  padding: 16px 24px;
   justify-content: space-between;
   align-items: center;
   flex: 1 0 0;
   border-radius: 5px;
   height: 80px;
+}
+
+a {
+  color: #09702C
 }
 
 .button-top {
@@ -252,7 +258,8 @@ export default {
     margin-block: 10px;
   }
 
-  .button-top, .button-bottom {
+  .button-top,
+  .button-bottom {
     padding: 10px 18px;
     height: 70px;
   }
@@ -264,46 +271,17 @@ export default {
 
 }
 
-@media screen and (max-width: 1650px) {
-  .join-sponsor {
-    display: grid;
-    grid-template: 1 1 / 1 1;
-    gap: 30px;
-  }
-
-  .heading {
-    grid-column: 1/2;
-    grid-row: 1/2;
-    width: 100%;
-    align-self: center;
-  }
-
+@media screen and (max-width: 1550px) {
   .buttons {
-    grid-column: 2/3;
-    grid-row: 1/2;
-    width: 100%;
+    font-size: 1.75vw;
   }
-
-  .button-top,
-.button-bottom {
-  align-items: center;
-  height: 80px;
-}
-
-  .subheading {
-    grid-column: 1/3;
-    grid-row: 2/3;
-    width: 100%;
-  }
-}
-
-@media screen and (max-width: 1500px) {
   .sponsor-name-one {
     font-size: 60px;
     line-height: 68px;
   }
 
-  .sponsor-desc-one, .sponsor-button-one {
+  .sponsor-desc-one,
+  .sponsor-button-one {
     font-size: 24px;
     line-height: 36px;
   }
@@ -313,17 +291,18 @@ export default {
   .title-section {
     margin-bottom: 200px;
   }
-  
+
   .title {
     font-size: 150px;
   }
 
-  .heading, .heading > i {
+  .heading,
+  .heading>i {
     font-size: 60px;
     line-height: 70px;
   }
 
-  .sponsor-box-one > :nth-child(2) {
+  .sponsor-box-one> :nth-child(2) {
     padding: 20px;
   }
 
@@ -342,21 +321,27 @@ export default {
   .title-section {
     margin-bottom: 150px;
   }
+
   .title {
     font-size: 100px;
   }
 
   .buttons {
-    font-size: 24px;
+    width: 30%;
+    font-size: 2vw;
+    letter-spacing: -1.5px;
   }
-  .button-top, .button-bottom {
+
+  .button-top,
+  .button-bottom {
     height: 60px;
   }
+
   .subheading {
     font-size: 24px;
   }
-  
-  .sponsor-box-one > img {
+
+  .sponsor-box-one>img {
     height: 500px;
   }
 
@@ -373,10 +358,17 @@ export default {
 
 }
 
+@media screen and (max-width: 900px) {
+  .button-top, .button-bottom {
+    padding: 10px;
+  }
+}
+
 @media screen and (max-width: 800px) {
   .title-section {
     margin-bottom: 100px;
   }
+
   .title {
     font-size: 80px;
     letter-spacing: -4.5px;
@@ -392,28 +384,74 @@ export default {
     display: block;
   }
 
-  .heading, .heading > i {
+  .heading,
+  .heading>i {
     font-size: 50px;
     line-height: 60px;
+    width: 100%;
+  }
+
+  .buttons {
+    width: 100%;
+    font-size: 3vw;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .button-top, .button-bottom {
+    width: 40vw;
+  }
+
+  .subheading {
+    width: 100%;
   }
 
   .sponsor-box-one {
     display: block;
   }
 
-  .sponsor-box-one > img {
+  .sponsor-box-one>img {
     width: 100%;
     height: 400px;
   }
 
-  .sponsor-box-one > :nth-child(2) {
+  .sponsor-box-one> :nth-child(2) {
     border-radius: 0 0 12px 12px;
   }
 
   .sponsor-desc-one {
-    margin-bottom: 70px;
+    margin-bottom: 150px;
   }
 }
+
+@media screen and (max-width: 625px) {
+  .title-section {
+    margin-bottom: 60px !important;
+  }
+
+  .title {
+    font-size: 50px;
+    line-height: 90px;
+  }
+
+  .heading,
+  .heading>i {
+    font-size: 30px;
+    letter-spacing: -2.4px;
+  }
+
+  .buttons {
+    letter-spacing: -1px;
+  }
+  .button-top, .button-bottom {
+    height: auto;
+  }
+
+  .button-top > img,.button-bottom > img {
+    height: 15px;
+  } 
+}
+
 
 @media screen and (max-width: 700px) {
   .title-section {
@@ -425,7 +463,8 @@ export default {
     line-height: 100px;
   }
 
-  .heading, .heading > i {
+  .heading,
+  .heading>i {
     font-size: 40px;
     letter-spacing: -3.6px;
   }
@@ -444,27 +483,11 @@ export default {
 
 }
 
-@media screen and (max-width: 600px) {
-  .title-section {
-    margin-bottom: 70px;
-  }
-
-  .title {
-    font-size: 50px;
-    line-height: 90px;
-  }
-
-  .heading, .heading > i {
-    font-size: 30px;
-    letter-spacing: -2.4px;
-  }
-
-}
-
 @media screen and (max-width: 500px) {
   .sponsors-section {
     padding-top: 47px;
   }
+
   .title-section {
     margin-bottom: 60px;
   }
@@ -482,7 +505,8 @@ export default {
     margin-bottom: 50px;
   }
 
-  .heading, .heading > i {
+  .heading,
+  .heading>i {
     font-size: 24px;
     letter-spacing: -2px;
     line-height: 40px;
@@ -492,7 +516,8 @@ export default {
     font-size: 20px;
   }
 
-  .button-top, .button-bottom {
+  .button-top,
+  .button-bottom {
     height: 50px;
     padding: 10px;
   }
@@ -502,7 +527,7 @@ export default {
     line-height: 28px;
   }
 
-  .sponsor-box-one > img {
+  .sponsor-box-one>img {
     height: 300px;
   }
 
@@ -533,7 +558,7 @@ export default {
     margin-block: 100px;
   }
 
-  .sponsor-box-two > img {
+  .sponsor-box-two>img {
     height: 125px;
   }
 
@@ -560,24 +585,28 @@ export default {
     letter-spacing: -1px;
   }
 
-  .button-top, .button-bottom {
+  .button-top,
+  .button-bottom {
     padding: 5px;
     height: 40px;
   }
-  .button-top > img, .button-bottom > img {
+
+  .button-top>img,
+  .button-bottom>img {
     width: 15px;
   }
 
-  .sponsor-box-one > img {
+  .sponsor-box-one>img {
     height: 200px;
   }
 
-} 
+}
 
 @media screen and (max-width: 300px) {
   .sponsors-section {
     padding: 20px;
   }
+
   .title {
     font-size: 25px;
     line-height: 60px;
@@ -588,17 +617,14 @@ export default {
     display: none;
   }
 
-  .button-top, .button-bottom {
+  .button-top,
+  .button-bottom {
     padding: 10px;
     height: 50px;
   }
 
-  .sponsor-box-one > img {
+  .sponsor-box-one>img {
     height: 150px;
   }
 
-} 
-
-
-
-</style>
+}</style>

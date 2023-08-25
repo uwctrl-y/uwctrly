@@ -26,7 +26,10 @@
                         src="../assets/faqArrow.svg" />
                 </div>
                 <Transition name="fadeHeight">
-                    <div v-if="qa.question == currentQuestion" class="answer">{{ qa.answer }}</div>
+                    <div v-if="qa.question == currentQuestion && qa.answer[0] != 'C'" class="answer">{{ qa.answer }}</div>
+                    <div v-else-if="qa.question == currentQuestion && qa.answer[0] == 'C'" class="answer">
+                        Contact us at <a href="mailto:ctrlplusy2023@gmail.com">ctrlplusy2023@gmail.com</a>!
+                    </div>
                 </Transition>
             </div>
             </div>
@@ -43,29 +46,29 @@ export default {
             questions1: [
                 {
                     "question": "Who can attend?",
-                    "answer": "answer1answer1answer1answer1answer1answer1answer1answer1answer1answer1answer1answer1 answer1answer1answer1answer1answer1answer1answer1answer1answer1answer1answer1answer1answer1answer1answer1answer1answer1answer1answer1answer1answer1answer1answer1answer1answer1answer1answer1answer1answer1answer1answer1answer1answer1answer1answer1answer1answer1answer1answer1"
+                    "answer": "The designathon is open to anyone passionate about design and innovation! Whether you're a seasoned designer, a student, a creative professional, or someone simply interested in exploring the world of design, you're welcome to attend and participate."
                 },
                 {
                     "question": "Do I apply with a team?",
-                    "answer": "answer2"
+                    "answer": "Yes, you can definitely apply with a team! If you already have a team in mind, you can register together. Don't worry if you don't have a team, though – we've got you covered! You can also register individually, and we'll help you find a team that aligns with your skills and interests."
                 },
                 {
                     "question": "How many people can be on one team?",
-                    "answer": "answer3"
+                    "answer": "Teams can consist of up to four members. While individual participation is allowed, we encourage team collaboration as it often leads to diverse and innovative solutions. If you're registering as an individual, we'll assist you in forming a well-balanced team during the event."
                 },
             ],
             questions2: [
                 {
                     "question": "When will registration begin?",
-                    "answer": "answer4"
+                    "answer": "Registration for the designathon will kick off on the 1st of September. Mark your calendars and get ready to secure your spot in this exciting event!"
                 },
                 {
                     "question": "What if I want to join virtually?",
-                    "answer": "answer5"
+                    "answer": "We understand that everyone's circumstances are different. That's why we offer both in-person and virtual participation options. If you're unable to join us physically, you can still be a part of the designathon from wherever you are, participating virtually and contributing your ideas and skills to the event."
                 },
                 {
-                    "question": "404 Question not found",
-                    "answer": "answer6"
+                    "question": "Still have questions?",
+                    "answer": "Contact us at ctrlplusy2023@gmail.com!"
                 },
             ],
             currentQuestion: ""
@@ -111,7 +114,7 @@ export default {
 }
 
 .questions-list {
-    margin: 250px 65px 0 65px;
+    margin: 250px 40px 0 40px;
     display: flex;
     gap: 32px
 }
@@ -165,9 +168,6 @@ export default {
 .answer {
     padding: 16px;
     max-width: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;    
 }
 
 @media screen and (max-width: 1400px) {
@@ -177,9 +177,14 @@ export default {
     }
 }
 
+a {
+    color: #09702C;
+    font-weight: 600;
+}
+
 @media screen and (max-width: 1150px) {
     .question-text {
-        font-size: 20px;
+        font-size: 22px;
     }
 
     .arrow-down, .arrow-active {
@@ -187,7 +192,7 @@ export default {
     }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 950px) {
     .faq-section {
         margin-block: 200px;
     }
@@ -196,7 +201,7 @@ export default {
         margin-top: 200px;
     }
     .question-text {
-        font-size: 18px;
+        font-size: 20px;
     }
 
     .arrow-down, .arrow-active {
@@ -204,7 +209,7 @@ export default {
     }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 860px) {
     .faq-section {
         margin-block: 150px;
     }
@@ -219,7 +224,7 @@ export default {
         margin-top: 100px;
     }
     .question-text {
-        font-size: 16px;
+        font-size: 18px;
     }
 
     .arrow-down, .arrow-active {
@@ -227,7 +232,7 @@ export default {
     }
 }
 
-@media screen and (max-width: 775px) {
+@media screen and (max-width: 800px) {
     .faq-section {
         margin-block: 100px;
     }
@@ -257,7 +262,7 @@ export default {
 
 @media screen and (max-width: 500px) {
     .question-text {
-        font-size: 16px;
+        font-size: 20px;
     }
 
     .arrow-down, .arrow-active {
@@ -277,10 +282,6 @@ export default {
 
     .title > :last-child {
         font-size: 20px;
-    }
-
-    .questions-list {
-        margin: 60px 20px 0 20px;
     }
 }
 

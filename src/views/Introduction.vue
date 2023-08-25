@@ -2,7 +2,6 @@
   <section>
     <div class="introduction-section">
       <div class="intro-left">
-        <p class="section-number">01.</p>
         <p class="section-title">About CTRL + y</p>
       </div>
       <div class="intro-right">
@@ -66,29 +65,22 @@ export default {
   color: #E4E4D0;
   display: flex;
   justify-content: space-between;
-  padding: 103px 83px 197px 83px;
+  padding: 103px 40px 197px 40px;
   background-color: #09702C;
 }
 
 .intro-left {
-  width: 210px;
+  width: max-content;
 }
 
 .intro-right {
   width: 70%;
 }
 
-.section-number {
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 30px;
-  letter-spacing: -1px;
-}
-
 .section-title {
   font-size: 30px;
   font-weight: 500;
-  line-height: 30px;
+  line-height: calc(5vw + 10px);
   letter-spacing: -1.5px;
 }
 
@@ -117,13 +109,19 @@ export default {
   overflow: hidden;
   position: relative;
   text-align: center;
-  margin: 80px 40px;
+  margin: 40px;
   border-radius: 10px;
 }
 
 .svg-paintbrush {
   width: 100%;
   max-width: 99vw;
+}
+
+@media screen and (max-width: 1150px) {
+  .section-title {
+    font-size: 25px;
+  }
 }
 
 @media screen and (max-width: 900px) {
@@ -134,11 +132,17 @@ export default {
 
   .intro-left {
     width: 100%;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
   }
 
   .intro-right {
     width: 100%;
+  }
+
+  .section-title {
+    line-height: 1em;
+    font-size: 20px;
+    letter-spacing: -1px;
   }
 }
 
@@ -148,38 +152,25 @@ export default {
   }
 
   .paintbrush-graphic {
-    margin: 60px 20px;
-    width: calc(100% - 40px);
+    margin: 60px 40px;
+    width: calc(100% - 80px);
   }
 }
 
-@media screen and (max-width: 400px) {
-  .introduction-section {
-    padding-bottom: 20px;
-  }
-
-  .section-number {
-    font-size: 15px;
-    letter-spacing: -.5px;
-  }
-
+@media screen and (max-width: 500px) {
   .section-title {
-    font-size: 25px;
-    letter-spacing: -1px;
+    font-size: 12px;
+    letter-spacing: -0.5px;
+  }
+
+  .intro-left {
+    margin-bottom: 0;
   }
 }
 
 @media screen and (max-width: 350px) {
   .introduction-section {
     padding-top: 40px;
-  }
-
-  .intro-left {
-    margin-bottom: 20px;
-  }
-
-  .section-title {
-    font-size: 18px;
   }
 
 }
