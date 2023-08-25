@@ -117,7 +117,7 @@ export default {
   font-size: 84px;
   font-style: normal;
   font-weight: 500;
-  line-height: 90px;
+  line-height: 1.1em;
   letter-spacing: -4.2px;
   width: 30%;
 }
@@ -126,7 +126,7 @@ export default {
   font-size: 84px;
   font-style: italic;
   font-weight: 500;
-  line-height: 90px;
+  line-height: 1.1em;
   letter-spacing: -4.2px;
 }
 
@@ -147,6 +147,7 @@ export default {
   flex: 1 0 0;
   border-radius: 5px;
   height: 80px;
+  padding: 16px 24px;
 }
 
 a {
@@ -154,7 +155,7 @@ a {
 }
 
 .button-top {
-  border: 4px solid #09702C;
+  border: 2px solid #09702C;
   background: #09702C;
   color: #F0F0EC;
   margin-bottom: 16px;
@@ -299,7 +300,6 @@ a {
   .heading,
   .heading>i {
     font-size: 60px;
-    line-height: 70px;
   }
 
   .sponsor-box-one> :nth-child(2) {
@@ -387,7 +387,6 @@ a {
   .heading,
   .heading>i {
     font-size: 50px;
-    line-height: 60px;
     width: 100%;
   }
 
@@ -509,7 +508,6 @@ a {
   .heading>i {
     font-size: 24px;
     letter-spacing: -2px;
-    line-height: 40px;
   }
 
   .buttons {
@@ -568,9 +566,9 @@ a {
 
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {
   .title {
-    font-size: 25px;
+    font-size: 30px;
     line-height: 60px;
     letter-spacing: -2.5px;
   }
@@ -602,6 +600,17 @@ a {
 
 }
 
+
+@media screen and (max-width: 400px) {
+  .button-top, .button-bottom {
+    width: 35vw;
+  }
+
+  .buttons {
+    font-size: 4vw;
+  }
+}
+
 @media screen and (max-width: 300px) {
   .sponsors-section {
     padding: 20px;
@@ -627,4 +636,7 @@ a {
     height: 150px;
   }
 
-}</style>
+}
+
+
+</style>
