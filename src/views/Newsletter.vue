@@ -23,13 +23,13 @@
           <input v-on:click="submit" class="newsletter-email-submit" type="submit" value="join our newsletter">
       </form> 
       <div class="newsletter-section-socials">
-      <a href="https://www.instagram.com/" target="_blank" class="social-link">
+      <a href="https://www.instagram.com/ctrl.plus.y/" target="_blank" class="social-link">
         <img src="../assets/newsletterForm/instagramIcon.svg" alt="Instagram">
       </a>
-      <a href="https://www.linkedin.com/" target="_blank" class="social-link">
+      <a href="https://www.linkedin.com/company/ctrl-plus-y/" target="_blank" class="social-link">
         <img src="../assets/newsletterForm/linkedinIcon.svg" alt="LinkedIn">
       </a>
-      <a href="" target="_blank" class="social-link">
+      <a href="mailto:ctrlplusy2023@gmail.com" class="social-link">
         <img src="../assets/newsletterForm/mailIcon.svg" alt="Email">
       </a>
     </div> 
@@ -121,7 +121,7 @@ export default {
   background: #09702C;
   color: #E4E4D0;
   border: 4px solid rgba(228, 228, 208, 0.50);
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
@@ -144,7 +144,7 @@ export default {
   border-radius: 0.3125rem;
   background: #E4E4D0;
   color: #09702C;
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
@@ -158,7 +158,6 @@ export default {
   display: flex;
   justify-content: center; 
   gap: 32px;
-  margin-bottom: 112px;
   
 }
 
