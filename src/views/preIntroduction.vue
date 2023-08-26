@@ -167,7 +167,6 @@ export default {
 
 @media screen and (max-width: 1100px) {
   .eyes {
-    width: 150px;
     margin-top: 6vh;
     margin-left: -30vw;
   }
@@ -176,7 +175,6 @@ export default {
 @media screen and (max-width: 1000px) {
   .pre-introduction-section {
     margin-top: -275px;
-    padding-top: 10px;
     padding-bottom: 10px;
     justify-content:flex-start;
     margin-right: auto;
@@ -187,8 +185,8 @@ export default {
     margin-left: -45px;
   }
   .eyes {
-    margin-top: 14vh;
-    margin-left: 60vw;
+    margin-top: 12vh;
+    margin-left: 55vw;
   }
 }
 
