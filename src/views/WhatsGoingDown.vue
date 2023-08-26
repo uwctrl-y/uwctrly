@@ -101,14 +101,15 @@ export default {
   margin-top: 100px;
   overflow: visible;
   margin-bottom: 400px;
+  padding: 103px 40px 197px 40px;
 }
  .whats-going-down-title {
     color: #09702C;
     text-align: center;
-    font-size: 11.25rem;
+    font-size: 11rem;
     font-style: normal;
     font-weight: 500;
-    line-height: 11.25rem; /* 100% */
+    line-height: 11rem; /* 100% */
     letter-spacing: -0.5625rem;
     text-transform: uppercase;
     text-size-adjust: 100%;

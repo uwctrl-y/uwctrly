@@ -104,6 +104,7 @@ export default {
   .section-heading {
     padding-top: 3vh;
     column-gap: 30px;
+    width: 100vw;
   }
 }
 

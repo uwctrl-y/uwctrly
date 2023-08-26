@@ -85,14 +85,12 @@ export default {
   color: #E4E4D0;
   font-style: normal;
   display: flex;
-  margin-top: -45vh;
   justify-content: center;
   align-items: center;
   min-height: 400px;
-  padding-bottom: 10vh;
   column-gap: 20px;
-  padding-top: 5vh;
   margin-bottom: -2px;
+  padding: 103px 40px 197px 40px;
 }
 
 .eyes {
@@ -144,7 +142,7 @@ export default {
 
 @media screen and (max-width: 1600px) {
   .eyes {
-    transform: scale(0.8);
+    width: 200px;
     margin-top: 10vh;
     margin-left: -21vw;
   }
@@ -161,17 +159,17 @@ export default {
 }
 @media screen and (max-width: 1300px) {
   .eyes {
-    transform: scale(0.8);
+    width: 180px;
     margin-top: 10vh;
-    margin-left: -18vw;
+    margin-left: -28vw;
   }
 }
 
 @media screen and (max-width: 1100px) {
   .eyes {
-    transform: scale(0.7);
-    margin-top: 10vh;
-    margin-left: -20vw;
+    width: 150px;
+    margin-top: 6vh;
+    margin-left: -30vw;
   }
 }
 
@@ -186,12 +184,11 @@ export default {
     padding-left: 83px;
   }
   .pre-intro-1, .pre-intro-2, .pre-intro-3 {
-    margin-left: 0px;
+    margin-left: -45px;
   }
   .eyes {
-    transform: scale(0.55);
-    margin-top: 32vh;
-    margin-left: 55vw;
+    margin-top: 14vh;
+    margin-left: 60vw;
   }
 }
 
@@ -217,7 +214,6 @@ export default {
 
 @media screen and (max-width: 600px) {
   .pre-introduction-section {
-    padding: 60px 40px 80px 40px;
     margin-top: -150px
   }
 }
