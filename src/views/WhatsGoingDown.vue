@@ -214,11 +214,16 @@ export default {
     .panel-text {
       font-size: 24px;
     }
+
+    .row {
+      height: 120vh;
+    }
   }
 
   @media screen and (max-width: 900px) {
     .row {
       gap: 30px;
+      height: 110vh;
     }
     .panel-heading {
       font-size: 50px;
@@ -235,12 +240,15 @@ export default {
       margin: 0 40px;
       line-height: 8rem;
     }
+
+    .whats-going-down-subheading {
+      margin-bottom: 80px;
+    }
     .row {
       flex-direction: column;
       height: auto;
       gap: 100px;
       align-items: center;
-      margin-bottom: 100px;
     }
     .panel {
       width: 75vw;
@@ -253,6 +261,10 @@ export default {
     }
     .panel-text {
       font-size: 30px;
+    }
+
+    .whats-going-down-section {
+      margin-bottom: 0;
     }
   }
 
