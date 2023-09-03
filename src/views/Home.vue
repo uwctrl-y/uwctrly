@@ -150,7 +150,7 @@ export default {
     padding-top: 4vh;
 }
 
-.hero-image-container svg {
+.hero-image-container img {
   padding-top: 1.5rem;
   width: 60%;
   text-size-adjust: 100%;
@@ -172,6 +172,12 @@ export default {
 
 template {
   scroll-behavior: smooth;
+}
+
+@media screen and (max-width: 400px) {
+  .hero-title {
+    font-size: 2.8em;
+  }
 }
 
 @media (min-width: 768px) {
