@@ -193,6 +193,12 @@ template {
   }
 }
 
+@media (max-width: 768px) {
+  .hero-subtitle {
+    max-width: 50%;
+  }
+}
+
 .tv-shadow path:nth-child(1) {
     fill: transparent;
     transition: fill 0.5s linear; /* Added "linear" timing function */
