@@ -55,7 +55,7 @@ export default {
       };
     }
     else {
-      const sentenceString1 = "WOULD YOU LIKE...TO DESIGN THE FUTURE"
+      const sentenceString1 = "WOULD YOU LIKE...TO DESIGN THE FUTURE?"
       const sentenceArray1 = sentenceString1.split(" ").map(string => ({ content: string}))
       return {
         heading1: sentenceArray1,
@@ -96,15 +96,7 @@ export default {
 }
 
 .eyes {
-  /* margin-top:-100%; */
-  /* margin-left: 20%; */
-  /* margin-left: 20vw; */
-  /* margin-left: -55vw; */
-  /* z-index: -1; */
-  /* margin-top: 11vh; */
   position: absolute;
-  /* left: 35%;
-  top: 1260px; */
   margin-left: -4vw;
   margin-top: 9vh;
   opacity: 0;
@@ -144,7 +136,7 @@ export default {
 
 @media screen and (max-width: 1600px) {
   .eyes {
-    transform: scale(0.8);
+    width: 200px;
     margin-top: 10vh;
     margin-left: -21vw;
   }
@@ -161,24 +153,24 @@ export default {
 }
 @media screen and (max-width: 1300px) {
   .eyes {
-    transform: scale(0.8);
+    width: 180px;
     margin-top: 10vh;
-    margin-left: -18vw;
+    margin-left: -28vw;
+  }
+  .pre-introduction-section {
+    margin-top: -30vh;
   }
 }
 
 @media screen and (max-width: 1100px) {
   .eyes {
-    transform: scale(0.7);
-    margin-top: 10vh;
-    margin-left: -20vw;
+    margin-top: 6vh;
+    margin-left: -30vw;
   }
 }
 
 @media screen and (max-width: 1000px) {
   .pre-introduction-section {
-    margin-top: -275px;
-    padding-top: 10px;
     padding-bottom: 10px;
     justify-content:flex-start;
     margin-right: auto;
@@ -186,18 +178,17 @@ export default {
     padding-left: 83px;
   }
   .pre-intro-1, .pre-intro-2, .pre-intro-3 {
-    margin-left: 0px;
+    margin-left: -45px;
   }
   .eyes {
-    transform: scale(0.55);
-    margin-top: 32vh;
+    margin-top: 12vh;
     margin-left: 55vw;
   }
 }
 
 @media screen and (max-width: 900px) {
   .pre-introduction-section {
-    margin-top: -250px;
+    margin-top: -28vh;
   }
 }
 @media screen and (max-width: 800px) {
@@ -209,22 +200,34 @@ export default {
     margin-right: -100px;
   } 
   .pre-introduction-section {
-    margin-top: -200px;
+    margin-top: -22vh;
     margin-bottom: -90px;
     padding-top: 40px;
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
   .pre-introduction-section {
-    padding: 60px 40px 80px 40px;
-    margin-top: -150px
+    margin-top: -18vh;
   }
 }
 
 @media screen and (max-width: 600px) {
   .pre-introduction-section {
-    margin-bottom: -100px;
+    margin-top: -15vh;
+    padding-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .pre-introduction-section {
+    margin-top: -12vh;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .pre-introduction-section {
+    margin-top: -70px
   }
 }
 
