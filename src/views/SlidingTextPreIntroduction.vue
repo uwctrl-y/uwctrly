@@ -41,6 +41,7 @@ export default {
   display: flex;
   column-gap: 40px;
   letter-spacing: -9px;
+  padding-right: 40px;
 }
 
 .animated-word {
@@ -104,6 +105,7 @@ export default {
   .section-heading {
     padding-top: 3vh;
     column-gap: 30px;
+    width: 100vw;
   }
 }
 
