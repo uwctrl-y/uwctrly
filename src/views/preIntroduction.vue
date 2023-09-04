@@ -80,12 +80,12 @@ export default {
 
 <style>
 .pre-introduction-section {
-  transition: opacity 0.5s, transform 0.5s, background-color 0.5s;
   background-color: #09702C;
+  transition: opacity 0.5s, transform 0.5s, background-color 0.5s;
   color: #E4E4D0;
   font-style: normal;
   display: flex;
-  margin-top: -45vh;
+  margin-top: -40vh;
   justify-content: center;
   align-items: center;
   min-height: 400px;
