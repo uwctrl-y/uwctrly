@@ -1,5 +1,5 @@
 <template>
-    <section class="faq-section">
+    <section class="faq-section" ref="faqSection">
         <div class="title">
             <div>FAQ</div>
             <img class="faq-graphic" ref="graphic" src="../assets/faqGraphic.svg" />
