@@ -150,7 +150,7 @@ export default {
     padding-top: 4vh;
 }
 
-.hero-image-container img {
+.hero-image-container svg {
   padding-top: 1.5rem;
   width: 60%;
   text-size-adjust: 100%;
