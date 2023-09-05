@@ -1,4 +1,4 @@
-<template>
+npm <template>
   <div class="splash-screen">
     <div :class="{ loader: true, fadeout: !isLoading, keys}">
       <img src="@/assets/home/keyanimated.gif" alt="">

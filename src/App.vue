@@ -1,6 +1,6 @@
 <template>
   <splash-screen v-if="isLoading" :isLoading="isLoading" />
-  <main v-if="!isLoading">
+    <main v-if="!isLoading">
     <div ref="componentsBeforeIntro">
       <home />
     </div>
