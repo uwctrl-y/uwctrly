@@ -41,6 +41,7 @@ export default {
   display: flex;
   column-gap: 40px;
   letter-spacing: -9px;
+  padding-right: 80px;
 }
 
 .animated-word {
@@ -100,10 +101,12 @@ export default {
   .animated-word p {
     font-size: 90px;
     letter-spacing: -6px;
+    line-height: 80px;
   }
   .section-heading {
     padding-top: 3vh;
     column-gap: 30px;
+    width: 100vw;
   }
 }
 
@@ -111,6 +114,7 @@ export default {
   .animated-word p {
     font-size: 80px;
     letter-spacing: -5.5px;
+    line-height: 75px;
   }
   
 }
@@ -118,6 +122,8 @@ export default {
 @media screen and (max-width: 800px) {
   .animated-word p {
     font-size: 74px;
+    letter-spacing: -5.2px;
+    line-height: 85px;
   }
   .section-heading {
     padding-top: 0;
@@ -128,11 +134,22 @@ export default {
 @media screen and (max-width: 600px) {
   .animated-word p {
     font-size: 64px;
+    letter-spacing: -4.5px;
+    line-height: 80px;
   }
   .section-heading {
     column-gap: 18px;
   }
 }
+
+@media screen and (max-width: 500px) {
+  .animated-word p {
+    font-size: 52px;
+    letter-spacing: -4px;
+    line-height: 70px;
+  }
+}
+
 @media screen and (max-width: 400px) {
   .animated-word p {
     font-size: 44px;

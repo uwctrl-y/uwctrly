@@ -101,14 +101,15 @@ export default {
   margin-top: 100px;
   overflow: visible;
   margin-bottom: 400px;
+  padding: 103px 40px 197px 40px;
 }
  .whats-going-down-title {
     color: #09702C;
     text-align: center;
-    font-size: 11.25rem;
+    font-size: 11rem;
     font-style: normal;
     font-weight: 500;
-    line-height: 11.25rem; /* 100% */
+    line-height: 11rem; /* 100% */
     letter-spacing: -0.5625rem;
     text-transform: uppercase;
     text-size-adjust: 100%;
@@ -131,7 +132,6 @@ export default {
     font-weight: 400;
     line-height: 40px;
     letter-spacing: -1.5px;
-    /* margin-bottom: 447px; */
     margin-bottom: -350px;
   }
   .panel {
@@ -214,11 +214,16 @@ export default {
     .panel-text {
       font-size: 24px;
     }
+
+    .row {
+      height: 120vh;
+    }
   }
 
   @media screen and (max-width: 900px) {
     .row {
       gap: 30px;
+      height: 110vh;
     }
     .panel-heading {
       font-size: 50px;
@@ -235,12 +240,15 @@ export default {
       margin: 0 40px;
       line-height: 8rem;
     }
+
+    .whats-going-down-subheading {
+      margin-bottom: 80px;
+    }
     .row {
       flex-direction: column;
       height: auto;
       gap: 100px;
       align-items: center;
-      margin-bottom: 100px;
     }
     .panel {
       width: 75vw;
@@ -253,6 +261,10 @@ export default {
     }
     .panel-text {
       font-size: 30px;
+    }
+
+    .whats-going-down-section {
+      margin-bottom: 0;
     }
   }
 

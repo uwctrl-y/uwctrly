@@ -181,6 +181,12 @@ template {
   scroll-behavior: smooth;
 }
 
+@media screen and (max-width: 400px) {
+  .hero-title {
+    font-size: 2.8em;
+  }
+}
+
 @media (min-width: 768px) {
   .hero-section {
     flex-direction: row;
@@ -191,6 +197,12 @@ template {
     margin-bottom: 0;
     width: 100%;
     text-size-adjust: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-subtitle {
+    max-width: 50%;
   }
 }
 
