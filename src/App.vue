@@ -10,7 +10,7 @@
     <sponsors/>
     <faq/>
     <OurTeam/>
-    <newsletter/>
+    <registration/>
   </main>
 </template>
 
@@ -19,7 +19,7 @@ import Home from "@/views/Home.vue";
 import About from "@/views/About.vue";
 import Introduction from "@/views/Introduction.vue";
 import WhatsGoingDown from "./views/WhatsGoingDown.vue";
-import Newsletter from "@/views/Newsletter.vue"
+import Registration from "@/views/Registration.vue"
 import SplashScreen from "@/components/splashScreen.vue";
 import SlidingText from "@/views/SlidingText.vue";
 import PreIntroduction from "@/views/preIntroduction.vue";
@@ -30,7 +30,7 @@ import '@/assets/css/scrollbar.css';
 
 export default { 
   name: 'App',
-  components: { PreIntroduction, SlidingText, SplashScreen, About, Home, Introduction, WhatsGoingDown, Sponsors, Faq, OurTeam, Newsletter },
+  components: { PreIntroduction, SlidingText, SplashScreen, About, Home, Introduction, WhatsGoingDown, Sponsors, Faq, OurTeam, Registration },
   methods: {
     scroll() {
       window.onscroll = () => {
