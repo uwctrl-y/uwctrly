@@ -1,9 +1,9 @@
 <template>
   <section>
-    <div class="newsletter-section">
-      <div class="newsletter-info">
-          <h1 class="newsletter-section-heading">stay updated</h1>
-          <svg class="newsletter-section-divider" width="71" height="71" viewBox="0 0 71 71" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <div class="registration-section">
+      <div class="registration-info">
+          <h1 class="registration-section-heading">register now</h1>
+          <svg class="registration-section-divider" width="71" height="71" viewBox="0 0 71 71" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M35.5001 71C40.8306 71 44 67.1485 44 62.97C44 59.4353 38.5995 46.306 36.4079 41.1235C36.0663 40.3157 34.942 40.3191 34.6048 41.1288C32.4213 46.3714 27 59.7157 27 62.97C27 67.1485 30.1695 71 35.5001 71Z" fill="#E4E4D0"/>
               <path d="M4.25011 53.3613C6.9154 57.9777 11.8356 58.7967 15.4542 56.7075C18.5154 54.9401 27.1855 43.6984 30.5778 39.2092C31.1066 38.5094 30.5415 37.5375 29.6717 37.6503C24.0397 38.3807 9.77253 40.3579 6.95423 41.985C3.33556 44.0743 1.58482 48.7449 4.25011 53.3613Z" fill="#E4E4D0"/>
               <path d="M4.25011 17.3614C6.9154 12.745 11.8356 11.926 15.4542 14.0152C18.5154 15.7825 27.1855 27.0242 30.5778 31.5134C31.1066 32.2132 30.5415 33.1851 29.6717 33.0723C24.0397 32.342 9.77253 30.3648 6.95423 28.7376C3.33556 26.6484 1.58482 21.9778 4.25011 17.3614Z" fill="#E4E4D0"/>
@@ -11,55 +11,41 @@
               <path d="M66.7499 17.6387C64.0846 13.0223 59.1644 12.2033 55.5458 14.2925C52.4846 16.0599 43.8145 27.3016 40.4222 31.7908C39.8934 32.4906 40.4585 33.4625 41.3283 33.3497C46.9603 32.6193 61.2275 30.6421 64.0458 29.015C67.6644 26.9257 69.4152 22.2551 66.7499 17.6387Z" fill="#E4E4D0"/>
               <path d="M66.7499 53.6386C64.0846 58.255 59.1644 59.074 55.5458 56.9848C52.4846 55.2174 43.8145 43.9758 40.4222 39.4866C39.8934 38.7868 40.4585 37.8149 41.3283 37.9277C46.9603 38.658 61.2275 40.6352 64.0458 42.2624C67.6644 44.3516 69.4152 49.0222 66.7499 53.6386Z" fill="#E4E4D0"/>
           </svg>
-          <p class="newsletter-section-subheading">We'll update you when registration begins</p>
+          <p class="registration-section-subheading">Select the button below to register</p>
       </div>  
-      <form class="newsletter-form">
-          <input class="newsletter-email-input" 
-              type="email" 
-              v-model="email"
-              name="email"
-              placeholder="Enter your email."
-          >
-          <input v-on:click="submit" class="newsletter-email-submit" type="submit" value="join our newsletter">
-      </form> 
-      <div class="newsletter-section-socials">
+      <div class="registration-button">
+        <a href="https://forms.gle/aFEpStEECJ84yo8D8" target="_blank">
+          <div class="button-inner">
+            <div>register here</div>
+            <img ref="graphic" src="../assets/expandArrowGreen.svg"/>
+          </div>
+        </a>
+      </div>
+      <div class="registration-section-socials">
       <a href="https://www.instagram.com/ctrl.plus.y/" target="_blank" class="social-link">
-        <img src="../assets/newsletterForm/instagramIcon.svg" alt="Instagram">
+        <img src="../assets/registration/instagramIcon.svg" alt="Instagram">
       </a>
       <a href="https://www.linkedin.com/company/ctrl-plus-y/" target="_blank" class="social-link">
-        <img src="../assets/newsletterForm/linkedinIcon.svg" alt="LinkedIn">
+        <img src="../assets/registration/linkedinIcon.svg" alt="LinkedIn">
       </a>
       <a href="mailto:ctrlplusy2023@gmail.com" class="social-link">
-        <img src="../assets/newsletterForm/mailIcon.svg" alt="Email">
+        <img src="../assets/registration/mailIcon.svg" alt="Email">
       </a>
     </div> 
     </div>
-    <footer class="newsletter-form-footer">
-      <img src="../assets/newsletterForm/newsletterFormFooterImage.svg" alt="Ctrl+y"> 
+    <footer class="registration-section-footer">
+      <img src="../assets/registration/registrationSectionFooterImage.svg" alt="Ctrl+y"> 
     </footer>
   </section>
 </template>
 
 <script>
-// import db from '../firestoreInit'
 export default {
-  // data: function() {
-  //   return {
-  //     emailAddress: '',
-  //   }
-  // },
-  // methods: {
-  //   submit: function() {
-  //     db.collection("EmailAddresses").add({
-  //       emailAddress: this.emailAddress
-  //     })
-  //   }
-  // }
 }
 </script>
 
 <style scoped>
-.newsletter-section {
+.registration-section {
   padding: 106px 18rem;
   justify-content: center;
   border-top-right-radius: 16px;
@@ -68,7 +54,7 @@ export default {
   overflow: hidden;
   margin-bottom: -2px;
 }
-.newsletter-info {
+.registration-info {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -78,7 +64,7 @@ export default {
   margin-left: -30%;
 }
 
-.newsletter-section-heading {
+.registration-section-heading {
   color: #E4E4D0;
   text-align: center;
   font-size: 11.25rem;
@@ -89,12 +75,12 @@ export default {
   text-transform: uppercase;
 }
 
-.newsletter-section-divider {
+.registration-section-divider {
   width: 4.4375rem;
   height: 4.4375rem;
 }
 
-.newsletter-section-subheading {
+.registration-section-subheading {
   color: #E4E4D0;
   font-size: 1.875rem;
   font-style: normal;
@@ -102,45 +88,54 @@ export default {
   line-height: 2.5rem; /* 133.333% */
   letter-spacing: -0.09375rem;
   text-align: center;
+  margin-bottom: -50px;
 }
-
-.newsletter-form {
-  display: inline-flex;
-  flex-direction: row;
-  align-self: center;
-  width: 100%;
-}
-.newsletter-email-input {
-  border-style: none;
-  display: flex;
-  padding: 1rem;
-  align-items: center;
-  flex: 2;
-  border-radius: 0.3125rem;
-  border-radius: 5px;
-  background: #09702C;
-  color: #E4E4D0;
-  border: 4px solid rgba(228, 228, 208, 0.50);
-  font-size: 2.3rem;
+.registration-button {
+  width: 40%;
+  font-size: 40px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-  letter-spacing: -0.125rem;
-  z-index: 1;
+  letter-spacing: -2px;
+  margin: auto;
 }
-
-.newsletter-email-input::placeholder {
-  color: #E4E4D0;
+.button-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1 0 0;
+  border-radius: 5px;
+  height: 80px;
+  padding: 16px 24px;
+  border-radius: 0.3125rem;
+  background: #E4E4D0;
+  color: #09702C;
+  margin-bottom: 16px;
 }
-
-.newsletter-email-submit {
-  border-style: none;;
+/* .register-button {
+  border-style: none;
   display: flex;
   padding: 1rem;
   flex: 1;
   align-items: center;
   justify-content: center;
-  gap: 0.625rem;
+  border-radius: 0.3125rem;
+  background: #E4E4D0;
+  color: #09702C;
+  font-size: 2.3rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.125rem;
+}
+
+.register-button:hover {
+  border-style: none;
+  display: flex;
+  padding: 1rem;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
   border-radius: 0.3125rem;
   background: #E4E4D0;
   color: #09702C;
@@ -150,10 +145,9 @@ export default {
   line-height: normal;
   letter-spacing: -0.125rem;
   z-index: 1;
-  margin-left: 1rem;
-}
+} */
 
-.newsletter-section-socials {
+.registration-section-socials {
   margin-top: 80px;
   display: flex;
   justify-content: center; 
@@ -170,7 +164,7 @@ a:hover {
   background-color: transparent;
 }
 
-.newsletter-form-footer {
+.registration-section-footer {
   display: flex;
   background: #09702C;
   justify-content: flex-end;
@@ -179,91 +173,70 @@ a:hover {
   margin-top: auto;
 }
 
-.newsletter-form-footer img {
+.registration-section-footer img {
     max-width: 100%;
   }
 
 @media screen and (max-width: 1350px) {
-  .newsletter-section {
+  .registration-section {
     padding-right: 0;
     padding-left: 0;
   }
-  .newsletter-section-heading {
+  .registration-section-heading {
     font-size: 150px;
   }
-  .newsletter-form {
-    width: 60vw;
-    justify-content: center;
-    margin-left: 20%;
-  }
-
-  .newsletter-email-input {
-    font-size: 34px;
-  }
-  .newsletter-email-submit {
+  .registration-button {
     font-size: 34px;
   }
 }
 
 @media screen and (max-width: 1200px) {
-  .newsletter-section-heading {
+  .registration-section-heading {
     font-size: 100px;
     letter-spacing: -4.5px;
   }
-  .newsletter-section-subheading {
+  .registration-section-subheading {
     font-size: 24px;
   }
-  .newsletter-email-input {
-    font-size: 30px;
-  }
-  .newsletter-email-submit {
+  .registration-button {
     font-size: 30px;
   }
 }
 
 @media screen and (max-width: 800px) {
-  .newsletter-section-heading {
+  .registration-section-heading {
     font-size: 80px;
     letter-spacing: -4.5px;
     line-height: 110px;
   }
 
-  .newsletter-section-subheading {
+  .registration-section-subheading {
     margin-bottom: -40px;
   }
 
-  .newsletter-section-divider {
+  .registration-section-divider {
     width: 60px;
     height: 60px;
   }
-  .newsletter-email-input {
+  .registration-button {
     font-size: 28px;
     padding: 0.8rem;
   }
-  .newsletter-email-submit {
-    font-size: 28px;
-    padding: 0.8rem;
-  }
+  .button-inner > img {
+  height: 20px;
+}
 }
 
 @media screen and (max-width: 700px) {
-  .newsletter-section {
+  .registration-section {
     margin-bottom: -80px;
   }
-  .newsletter-section-heading {
+  .registration-section-heading {
     margin: 0 200px;
   }
-  .newsletter-form {
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-  }
 
-  .newsletter-email-input {
-    width: 100%;
-  }
-  .newsletter-email-submit {
-    margin-left: 0;
+  .registration-button {
+    width: 50%;
   }
 
   .social-link img {
@@ -273,18 +246,20 @@ a:hover {
 
   
 }
-
 @media screen and (max-width: 500px) {
-  .newsletter-section {
+  .registration-section {
     margin-bottom: -100px;
   }
-  .newsletter-section-subheading {
+  .registration-section-subheading {
     margin: 0 200px -40px 200px;
   }
 
-  .newsletter-section-divider {
+  .registration-section-divider {
     width: 50px;
     height: 50px;
+  }
+  .registration-button {
+    width: 70%;
   }
   .social-link img {
     width: 35px;
@@ -294,52 +269,53 @@ a:hover {
 }
 
 @media screen and (max-width: 400px) {
-  .newsletter-section-heading {
+  .registration-section-heading {
     font-size: 60px;
     line-height: 60px;
     letter-spacing: -2.5px;
   }
-  .newsletter-section-subheading {
+  .registration-section-subheading {
     font-size: 20px;
     line-height: 28px;
     margin: 0 150px -50px 150px;
   }
 
-  .newsletter-section-divider {
+  .registration-section-divider {
     width: 40px;
     height: 40px;
   }
+  .registration-button {
+    font-size: 24px;
+  }
 
-  .newsletter-email-input {
-    font-size: 24px;
-  }
-  .newsletter-email-submit {
-    font-size: 24px;
-  }
+  .button-inner > img {
+  height: 15px;
+}
 }
 
 @media screen and (max-width: 300px) {
-  .newsletter-section {
+  .registration-section {
     margin-bottom: -130px;
   }
-  .newsletter-section-heading {
+  .registration-section-heading {
     font-size: 40px;
     line-height: 60px;
     letter-spacing: -2px;
   }
-  .newsletter-section-subheading {
+  .registration-section-subheading {
     font-size: 18px;
   }
-  .newsletter-section-divider {
+  .registration-section-divider {
     width: 30px;
     height: 30px;
   }
-  .newsletter-email-input {
+  .registration-button {
     font-size: 20px;
   }
-  .newsletter-email-submit {
-    font-size: 20px;
-  }
+
+  .button-inner > img {
+  height: 12px;
+}
 
   .social-link img {
     width: 30px;
