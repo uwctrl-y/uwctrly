@@ -1,5 +1,4 @@
 <template>
-  <nav-bar/>
   <section class="hero-section">
     <div class="content-container" data-aos="fade-up">
       <h1 class="hero-title">(welcome to)</h1>

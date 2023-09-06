@@ -2,19 +2,21 @@
   <splash-screen v-if="isLoading" :isLoading="isLoading" />
     <main v-if="!isLoading">
     <div ref="componentsBeforeIntro">
-      <home />
+      <nav-bar/>
+      <home id="home"/>
     </div>
-    <pre-introduction :reached-intro="reachedIntro"/>
-    <introduction :reachedIntro="reachedIntro" />
-    <WhatsGoingDown />
-    <sponsors/>
-    <faq/>
-    <OurTeam/>
-    <registration/>
+    <pre-introduction :reached-intro="reachedIntro" id="pre-introduction"/>
+    <introduction :reachedIntro="reachedIntro" id="introduction"/>
+    <WhatsGoingDown id="whats-going-down"/>
+    <sponsors id="sponsors"/>
+    <faq id="faq"/>
+    <OurTeam id="our-team"/>
+    <registration id="registration"/>
   </main>
 </template>
 
 <script>
+import NavBar from "./components/navBar.vue"
 import Home from "@/views/Home.vue";
 import About from "@/views/About.vue";
 import Introduction from "@/views/Introduction.vue";
@@ -30,7 +32,7 @@ import '@/assets/css/scrollbar.css';
 
 export default { 
   name: 'App',
-  components: { PreIntroduction, SlidingText, SplashScreen, About, Home, Introduction, WhatsGoingDown, Sponsors, Faq, OurTeam, Registration },
+  components: { NavBar, PreIntroduction, SlidingText, SplashScreen, About, Home, Introduction, WhatsGoingDown, Sponsors, Faq, OurTeam, Registration },
   methods: {
     scroll() {
       window.onscroll = () => {

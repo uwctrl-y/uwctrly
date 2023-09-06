@@ -1,24 +1,40 @@
 <template>
-  <nav class="nav-bar">
-    <img class="logo" src="@/assets/home/CTRL+y-Nav.png" alt="Logo">
+  <div class="nav-bar">
+    <nav class="nav-bar">
+    <img class="logo" src="@/assets/home/CTRL+y-Nav.png" alt="Logo" @click="scrollToSection('home')">
     <ul class="navbar-list">
-      <li class="navbar-item">about</li>
-      <li class="navbar-item">sponsors</li>
-      <li class="navbar-item">judges</li>
-      <li class="navbar-item">faq</li>
-      <li class="navbar-item">team</li>
+      <li class="navbar-item" @click="scrollToSection('pre-introduction')">about</li>
+      <li class="navbar-item" @click="scrollToSection('sponsors')">sponsors</li>
+      <!-- <li class="navbar-item" @click="scrollToSection('pre-introduction')">judges</li> -->
+      <li class="navbar-item" @click="scrollToSection('faq')">faq</li>
+      <li class="navbar-item" @click="scrollToSection('our-team')">team</li>
+      <li class="navbar-item" @click="scrollToSection('registration')">registration</li>
     </ul>
     <div class="navbar-item">
       <div>
         interested?
         <br>
-        <span>Contact Us</span>
+        <a style="color:inherit" href="mailto:ctrlplusy2023@gmail.com">Contact Us</a>
       </div>
     </div>
   </nav>
+  </div>
 </template>
 
-<style>
+<script>
+export default {
+  methods: {
+    scrollToSection(sectionId) {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth'});
+      }
+    },
+  },
+};
+</script>
+
+<style scoped>
 .nav-bar {
   padding-top: 15px;
   display: flex;
@@ -52,5 +68,3 @@
 
 </style>
 
-<script setup>
-</script>
