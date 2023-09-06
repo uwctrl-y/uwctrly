@@ -17,21 +17,32 @@
 </template>
 
 <script>
+import aashi from '../assets/ourTeam/testImages/aashi.png';
+import becca from '../assets/ourTeam/testImages/becca.png';
+import charissa from '../assets/ourTeam/testImages/charissa.png';
+import dayun from '../assets/ourTeam/testImages/dayun.png';
+import diana from '../assets/ourTeam/testImages/diana.png';
+import jake from '../assets/ourTeam/testImages/jake.png';
+import yosha from '../assets/ourTeam/testImages/yosha.png';
+import stella from '../assets/ourTeam/testImages/stella.png';
+import kyleigh from '../assets/ourTeam/testImages/kyleigh.png';
+
 export default {
+   
     data() {
         return {
             scrollOffset: 0,
             prevScrollY: 0,
             imageUrls: [
-                "src/assets/ourTeam/testImages/aashi.png",
-                "src/assets/ourTeam/testImages/becca.png",
-                "src/assets/ourTeam/testImages/charissa.png",
-                "src/assets/ourTeam/testImages/dayun.png",
-                "src/assets/ourTeam/testImages/diana.png",
-                "src/assets/ourTeam/testImages/jake.png",
-                "src/assets/ourTeam/testImages/yosha.png",
-                "src/assets/ourTeam/testImages/stella.png",
-                "src/assets/ourTeam/testImages/kyleigh.png",
+                aashi,
+                becca,
+                charissa,
+                dayun,
+                diana,
+                jake,
+                yosha,
+                stella,
+                kyleigh
             ],
             currentImageIndex: 0,
             lockScreen: true,
