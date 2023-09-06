@@ -17,7 +17,7 @@
     <div class="about-img-container" data-aos="fade-up">
       <img
           class="svg-filter"
-          src="../assets/zee.svg"
+          src="../assets/zee.png"
       />
     </div>
   </section>
