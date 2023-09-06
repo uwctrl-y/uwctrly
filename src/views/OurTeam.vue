@@ -23,7 +23,7 @@ export default {
             scrollOffset: 0,
             prevScrollY: 0,
             imageUrls: [
-                "/assets/ourTeam/testImages/aashi.png",
+                "src/assets/ourTeam/testImages/aashi.png",
                 "src/assets/ourTeam/testImages/becca.png",
                 "src/assets/ourTeam/testImages/charissa.png",
                 "src/assets/ourTeam/testImages/dayun.png",
