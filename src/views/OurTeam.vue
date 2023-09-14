@@ -117,8 +117,11 @@ export default {
 }
 
 .heading-container{
-    position: absolute;
-    z-index: 1;
+    /* position: absolute;*/
+    z-index: 1; 
+    display: flex;
+    justify-content: center;
+    /* margin-bottom: 295px; */
 }
 
 .heading-text {
@@ -134,7 +137,7 @@ export default {
 .parallax-container {
     overflow: hidden;
     position: relative;
-    height: 80vh;
+    /* height: 80vh; */
     text-align: center;
     display: flex;
     align-items: center;
@@ -157,18 +160,36 @@ export default {
     transition: top 0.2s ease; /* Add a smooth transition for the parallax effect */
 }
 
-@media screen and (max-width: 768px) {
-    .heading-text {
-        font-size: 12vw;
-        letter-spacing: -0.1em;
+@media screen and (max-width: 860px) {
+  .heading-text {
+    font-size: 140px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .heading-text {
+    font-size: 120px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+    .our-team-section {
+        padding: 50px;
     }
 }
 
-@media screen and (max-width: 480px) {
-    .heading-text {
-        font-size: 16vw;
-        letter-spacing: -0.05em;
+@media screen and (max-width: 400px) {
+  .heading-text {
+    font-size: 90px;
+    letter-spacing: -5px;
+    line-height: 100px;
+  }
+
+  .our-team-section {
+        padding: 30px;
     }
 }
+
+
 
 </style>
