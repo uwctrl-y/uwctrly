@@ -216,6 +216,7 @@ template {
     text-size-adjust: 100%;
     justify-content: center;
     margin-left: 20vw;
+    margin-bottom: -22vh;
   }
 }
 
