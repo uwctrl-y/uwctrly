@@ -206,6 +206,10 @@ template {
   .hero-subtitle {
     max-width: 70%;
   }
+  .hero-image-container {
+    margin-top: -50px;
+    margin-bottom: -50px;
+  }
   .hero-image-container svg {
     width: 100%;
     text-size-adjust: 100%;
