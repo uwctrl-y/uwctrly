@@ -154,6 +154,8 @@ export default {
 
 .hero-image-container {
   padding-top: 4vh;
+  margin-right: 10%;
+  margin-left: 10%;
 }
 
 .hero-image-container svg {

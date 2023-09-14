@@ -66,5 +66,10 @@ export default {
   margin-left: 2rem;
 }
 
+@media (max-width: 1028px) {
+  .nav-bar {
+    display: none;
+  }
+}
 </style>
 
