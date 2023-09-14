@@ -3,6 +3,7 @@
 #app {
   margin: 0 auto;
   font-weight: normal;
+  background: white;
   background-image: url(@/assets/home/background.png);
   background-position: center;
   overflow: hidden;
