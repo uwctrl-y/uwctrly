@@ -198,10 +198,22 @@ template {
     text-size-adjust: 100%;
   }
 }
-
 @media (max-width: 768px) {
+  .hero-title{
+  }
   .hero-subtitle {
-    max-width: 50%;
+    max-width: 70%;
+  }
+  .hero-image-container svg {
+    width: 100%;
+    text-size-adjust: 100%;
+  //transition: opacity 1s;
+  }
+  .hero-tv-container svg {
+    width: 200vw;
+    text-size-adjust: 100%;
+    justify-content: center;
+    margin-left: 20vw;
   }
 }
 
