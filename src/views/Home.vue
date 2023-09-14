@@ -201,8 +201,6 @@ template {
   }
 }
 @media (max-width: 768px) {
-  .hero-title{
-  }
   .hero-subtitle {
     max-width: 70%;
   }

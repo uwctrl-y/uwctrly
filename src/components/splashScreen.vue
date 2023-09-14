@@ -44,4 +44,14 @@ export default{
   }
 }
 
+@media (max-width: 480px) { 
+  .splash-screen {
+    margin-left: 5vw;
+  }
+  .keys {
+    width: 10%;
+  }
+}
+
+
 </style>
